@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabulky</title>
+</head>
+<body>
+
+    <!-- Jednoduchá Tabulka -->
+    <table>
+        <tr>
+            <td>Jméno:</td>
+            <td>Škola:</td>
+            <td>Rok narození:</td>
+        </tr>
+        <tr>
+            <td>Lukáš</td>
+            <td>Delta</td>
+            <td>1998</td>
+        </tr>
+        <tr>
+            <td>Franta</td>
+            <td>Delta</td>
+            <td>2005</td>
+        </tr>
+        <tr>
+            <td>Vladimír</td>
+            <td>AGYS</td>
+            <td>2010</td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Tabulka s nadpisy -->
+    <table>
+        <tr>
+            <th>Jméno:</th>
+            <th>Škola:</th>
+            <th>Rok narození:</th>
+        </tr>
+        <tr>
+            <td>Lukáš</td>
+            <td>Delta</td>
+            <td>1998</td>
+        </tr>
+        <tr>
+            <td>Franta</td>
+            <td>Delta</td>
+            <td>2005</td>
+        </tr>
+        <tr>
+            <td>Vladimír</td>
+            <td>AGYS</td>
+            <td>2010</td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Tabulka se sloučením sloupců -->
+    <table>
+        <tr>
+            <td colspan="3">Tabulka studentů z Pardubických škol</td>
+        </tr>
+        <tr>
+            <th>Jméno:</th>
+            <th>Škola:</th>
+            <th>Rok narození:</th>
+        </tr>
+        <tr>
+            <td>Lukáš</td>
+            <td>Delta</td>
+            <td>1998</td>
+        </tr>
+        <tr>
+            <td>Franta</td>
+            <td>Delta</td>
+            <td>2005</td>
+        </tr>
+        <tr>
+            <td>Vladimír</td>
+            <td>AGYS</td>
+            <td>2010</td>
+        </tr>
+        <tr>
+            <td colspan="2"> Jméno a škola </td>
+        </tr>
+    </table>
+
+    
+    <br>
+    <!-- Tabulka se sloučenými řádky -->
+    <table border="1">
+        <tr>
+            <th rowspan="2">Jméno:</th>
+            <td colspan="2">Tabulka studentů z Pardubických škol</td>
+        </tr>
+        <tr>
+            <th>Škola:</th>
+            <th>Rok narození:</th>
+        </tr>
+        <tr>
+            <td>Lukáš</td>
+            <td rowspan="2">Delta</td>
+            <td>1998</td>
+        </tr>
+        <tr>
+            <td>Franta</td>
+            <td>2005</td>
+        </tr>
+        <tr>
+            <td>Vladimír</td>
+            <td>AGYS</td>
+            <td>2010</td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Tabulka komplexní -->
+    <table border="1">
+        <thead>
+            <tr>
+            <th rowspan="2">Jméno <br> účastníka:</th>
+            <th colspan="3">Tabulka výsledků zápasu:</th>
+        </tr>
+        <tr>
+            <th>počet golů:</th>
+            <th>počet faulů:</th>
+            <th>počet minut ve hře:</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Igor</td>
+                <td>2</td>
+                <td>1</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>František</td>
+                <td>0</td>
+                <td>2</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Ignác</td>
+                <td>3</td>
+                <td>0</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Výsledky zápasu</td>
+                <td>Nejlepší hráč</td>
+            </tr>
+            <tr>
+                <td>Tým A</td>
+                <td>5</td>
+                <td>2</td>
+                <td>Ignác</td>
+            </tr>
+            <tr>
+                <td>Tým B</td>
+                <td>0</td>
+                <td>1</td>
+                <td>František</td>                
+            </tr>
+
+        </tfoot>
+    </table>
+
+</body>
+</html>
