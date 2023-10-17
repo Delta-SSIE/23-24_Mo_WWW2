@@ -13,3 +13,15 @@ h3
     font-size: 2em;
     font-family: sans-serif;
 }
+
+#hlav_nadpis
+{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: chocolate;
+}
+
+.moje_trida 
+{
+    font-size: 15px;
+}
