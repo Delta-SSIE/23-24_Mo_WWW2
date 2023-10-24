@@ -6,12 +6,20 @@ p {
     color:rgb(255, 0, 0);
     background-color: #000000;
     font-size: 12pt;
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 5em;
 }
 
 h1 {
     color: aqua;
     background-color: darkgreen;
     font-size: 3em;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px white;
+    letter-spacing: 5px;
 }
 
 a {
