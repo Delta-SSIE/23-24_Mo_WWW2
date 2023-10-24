@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+  }
+
+td, th {
+    border: 1px solid black;
+    padding: 2px 4px;
+  }
+
+* {
+    color:white;
+    background-color: black;
+}
+
+p {
+    color: rgb(245,245,245);
+    font-family: Georgia, serif 10pt;
+}
+
+h1 {
+    color: #ffd700;
+    font-family: 'Gill Sans', 'Calibri', sans-serif;
+}
+
+a {
+    color: tomato;
+}
