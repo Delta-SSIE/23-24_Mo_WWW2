@@ -36,3 +36,13 @@ h1 {
     font-size: 12px;
     color: deeppink;
 }
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+
+}
+
+ul {
+  list-style-image: url(../palec.jpg); 
+}
