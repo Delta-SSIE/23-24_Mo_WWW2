@@ -6,6 +6,7 @@
 table {
     border-collapse: collapse;
     text-align: center;
+    vertical-align: bottom;
   }
 
 td, th {
@@ -71,4 +72,22 @@ ul li {
 
 .popisek em {
     font-weight: bold;
+}
+
+ol {
+    line-height: 1.25;
+    list-style-type: upper-roman;
+}
+
+ul {
+    line-height: 1.25;
+    list-style-type: square;
+}
+
+th {
+    border: 3px solid red;
+}
+
+#t-nadpis {
+    border-bottom: 3px solid red;
 }
