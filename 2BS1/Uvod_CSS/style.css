@@ -4,6 +4,9 @@ p
     background-color: azure;
     font-size: 10px;
     font-family: serif;
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 20px;
 }
 
 h3
@@ -12,6 +15,8 @@ h3
     background-color: black;
     font-size: 2em;
     font-family: sans-serif;
+    text-decoration: line-through;
+    letter-spacing: 5px;
 }
 
 #hlav_nadpis
@@ -19,6 +24,10 @@ h3
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: chocolate;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 3px black;
 }
 
 .moje_trida 
