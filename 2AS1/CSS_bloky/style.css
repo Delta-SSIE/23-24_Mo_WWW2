@@ -1,0 +1,9 @@
+p {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-bottom-width: 5px;
+    padding: 10px;
+    margin: 15px;
+    display: block;
+}
