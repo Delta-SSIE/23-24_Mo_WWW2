@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    
+    text-align: center;
   }
 
   td, th {
@@ -16,11 +16,23 @@ table {
   p {
     color: rgb(245,245,245);
     font-family: Georgia, serif 10pt;
+    line-height: 130%;
+    text-align: justify;
+    text-indent: 2.5em;
 }
 
 h1, h2, h3 {
     color: #FFD700;
     font-family: 'Gill Sans', Calibri, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-shadow: 1px 2px gray;
 }
 
 a {
@@ -42,5 +54,25 @@ li a {
 }
 
 ul li {
+    font-weight: bold;
+}
+
+ul p {
+    text-indent: 0;
+}
+
+ol p {
+    text-indent: 0;
+    }
+
+#ukazka {
+    text-decoration: underline;
+}
+
+.popisek {
+    font-style: italic;
+}
+
+.popisek em {
     font-weight: bold;
 }
