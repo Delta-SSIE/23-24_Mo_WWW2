@@ -1,0 +1,23 @@
+* {
+    background-color: whitesmoke;
+}
+
+p {
+    color:rgb(255, 0, 0);
+    background-color: #000000;
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+}
+
+h1 {
+    color: aqua;
+    background-color: darkgreen;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+}
+
+a {
+    color: gold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
