@@ -7,6 +7,11 @@ p
     text-align: justify;
     line-height: 1.5;
     text-indent: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+    border-bottom-width:6px;
+    border-bottom-color:black;
 }
 
 h3
