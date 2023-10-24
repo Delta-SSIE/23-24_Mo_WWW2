@@ -17,11 +17,29 @@ p {
     font-family: Georgia, serif 10pt;
 }
 
-h1 {
+h1, h2, h3 {
     color: #ffd700;
     font-family: 'Gill Sans', 'Calibri', sans-serif;
 }
 
 a {
     color: tomato;
+}
+
+#uvod {
+    text-transform: capitalize;
+}
+
+.kroky {
+    font-size: small;
+    font-style: italic;
+}
+
+li a {
+    font-style: italic;
+    font-weight: bold;
+}
+
+ul {
+    font-weight: bold;
 }
