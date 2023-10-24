@@ -34,3 +34,15 @@ h3
 {
     font-size: 15px;
 }
+
+ul {
+    list-style-image: url(palec.jpg);
+    list-style-position: inside;
+
+}
+
+ol {
+  list-style-type: upper-roman; 
+  list-style-position: outside;
+ 
+}
