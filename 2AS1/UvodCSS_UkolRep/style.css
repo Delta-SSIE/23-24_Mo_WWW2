@@ -5,6 +5,7 @@
 
 table {
     border-collapse: collapse;
+    text-align: center;
   }
 
 td, th {
@@ -15,11 +16,27 @@ td, th {
 p {
     color: rgb(245,245,245);
     font-family: Georgia, serif 10pt;
+    line-height: 130%;
+    text-align: justify;
+    text-indent: 2.5em;
+}
+
+ol p, ul p {
+    text-indent: 0;
 }
 
 h1, h2, h3 {
     color: #FFD700;
     font-family: 'Gill Sans', 'Calibri', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    text-shadow: 1px 2px grey;
 }
 
 a {
@@ -41,5 +58,17 @@ li a {
 }
 
 ul li {
+    font-weight: bold;
+}
+
+#ukazka {
+    text-decoration: underline;
+}
+
+.popisek {
+    font-style: italic;
+}
+
+.popisek em {
     font-weight: bold;
 }
