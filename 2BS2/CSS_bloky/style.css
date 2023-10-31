@@ -1,0 +1,23 @@
+.bloky {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px 30px;
+    margin: 10px;
+    display: inline-block;
+    max-width: 500px;
+    min-width: 50px;
+    max-height: 400px;
+    min-height: 20px;
+    vertical-align: top;
+}
+
+.hl_blok {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px 30px;
+    margin: 10px;
+    width: 90%;
+    height: 50%;
+}
