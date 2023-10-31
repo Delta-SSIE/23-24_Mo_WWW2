@@ -3,6 +3,9 @@ p {
     background-color: #070041;
     font-size: 12pt;
     font-family: Cambria, Times, Georgia, serif;
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 1.5em;
 }
 
 h1 {
@@ -15,6 +18,8 @@ h1 {
 #hlav_nadpis {
     color: aqua;
     font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 #ved_nadpis {
@@ -32,6 +37,8 @@ h1 {
 
 p strong {
     font-size: 100px;
+    text-shadow: 2px 3px 5px white;
+    letter-spacing: 30pt;
 }
 
 h1, h2 {
