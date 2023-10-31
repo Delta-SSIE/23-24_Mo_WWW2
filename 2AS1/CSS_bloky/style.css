@@ -1,9 +1,38 @@
-p {
-    border-width: 2px;
-    border-color: black;
+.bloky {
+    padding: 5px;
+    margin: 10px;
+    border-width: 3px;
     border-style: solid;
-    border-bottom-width: 5px;
-    padding: 10px 20px;
-    margin: 15px;
-    display: block;
+    border-color: black;
+    display: inline-block;
+    max-height: 1000px;
+    min-height: 100px;
+    max-height: 5000px;
+    min-width: 50px;
+    vertical-align: top;
+}
+
+.poznamka {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    overflow: scroll;
+}
+
+.blokyy {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+.blok {
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+    width: 100%; 
 }
