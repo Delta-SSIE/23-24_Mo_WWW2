@@ -1,0 +1,20 @@
+.bloky {
+    margin: 15px;
+    padding: 15px;
+    border: 2px solid red;
+    display: inline-block;
+    max-width: 30%;
+    min-width: 10%;
+    max-height: 30%;
+    min-height: 10%;
+    vertical-align: top;
+}
+
+.blok {
+    border: 5px solid black;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    width: 80%;
+    height: 50%;
+}
