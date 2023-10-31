@@ -1,0 +1,58 @@
+
+h1, h2 {
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+color: gold;
+text-align: center;
+}
+
+p {
+    font-family: 'Times New Roman', Cambria, serif;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+ol {
+    font-style: italic;
+}
+
+ul {
+    font-weight: bold;
+}
+
+#nadpis {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.children {
+    color:red;
+    text-decoration: underline;
+}
+
+li a {
+    color:green;
+    font-size: 14pt;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+table {
+    border: 2px solid black;
+}
+
+th{
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+.category {
+    font-style: italic;
+}
