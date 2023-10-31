@@ -44,3 +44,26 @@ p strong {
 h1, h2 {
     font-weight: bold;
 }
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(thumb.png);
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: outside;
+}
+
+table, td, th {
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+th {
+    border-bottom-color: aqua;
+}
