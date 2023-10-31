@@ -1,6 +1,7 @@
 table {
     border-collapse: collapse;
     text-align: center;
+    vertical-align: bottom;
   }
 
 td,t h {
@@ -46,6 +47,13 @@ li a {
 
 ul {
     font-weight: bold;
+    line-height: 1.25;
+    list-style-type: square;
+}
+
+ol {
+    line-height: 1.25;
+    list-style-type: upper-roman;
 }
 
 li p {
@@ -71,4 +79,12 @@ h2 {
 
 .popisek em {
     font-weight: bold;
+}
+
+th {
+    border: 3px solid red
+}
+
+#t-h {
+    border-bottom: 3px solid red;
 }
