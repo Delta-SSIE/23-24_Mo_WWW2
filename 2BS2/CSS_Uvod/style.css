@@ -45,3 +45,29 @@ h1, p {
 .odstavec strong {
     font-size: 50px;
 }
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(thumb.png);
+}
+
+ol {
+    list-style-type: lower-roman;
+    list-style-position: outside;
+}
+
+table, td {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    vertical-align: middle;
+    width: 300px;
+}
+
+th {
+    border-bottom-width: 5px;
+    border-style: solid;
+    border-color: red;
+}
