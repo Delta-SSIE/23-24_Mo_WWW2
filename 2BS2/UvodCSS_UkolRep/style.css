@@ -1,6 +1,7 @@
 table {
     border-collapse: collapse;
     text-align: center;
+    vertical-align: bottom;
   }
 
 td, th {
@@ -55,7 +56,15 @@ li a {
 
 ul {
     font-weight: bold;
+    list-style-type: square;
+    line-height: 1.25;
 }
+
+ol {
+    list-style-type: upper-roman;
+    line-height: 1.25;
+}
+
 
 li p {
     text-indent: 0;
@@ -71,4 +80,16 @@ li p {
 
 .popisek em {
     font-weight: bold;
+}
+
+th {
+    border-width: 3px;
+    border-color: red;
+    border-style: solid;
+}
+
+#t-nadpisy {
+    border-bottom-width: 3px;
+    border-bottom-color: red;
+    border-bottom-style: solid;
 }
