@@ -1,0 +1,35 @@
+body {
+    background-color: lightgray;
+}
+
+.strom {
+    display: inline-block;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    padding: 15px 10px 30px;
+    vertical-align: top;
+    line-height: 150%;
+    height: 500px;
+    margin: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popis {
+    width: 50%;
+    display: inline-block;
+}
+
+.hodnota {
+    font-style: italic;
+}
+
+.nazev {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.strom img {
+    margin: 5px;
+}
