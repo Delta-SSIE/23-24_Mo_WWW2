@@ -1,0 +1,37 @@
+.nadpis {
+    border: 5px solid gold;
+    text-align: center;
+    margin: 5px;
+}
+
+.obsah {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    display: block;
+}
+
+.sloupec {
+    border: 1px solid red;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    max-width: 600px;
+    min-width: 200px;
+    max-height: 1000px;
+    min-height: 100px;
+    vertical-align: top;
+}
+
+.lorem {
+    text-transform: uppercase;
+    color:red;
+    font-size: large;
+}
+
+.odkaz a {
+    font-size: large;
+    color: blueviolet;
+    display: block;
+}
