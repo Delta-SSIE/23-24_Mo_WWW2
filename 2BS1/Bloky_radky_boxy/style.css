@@ -18,3 +18,29 @@
     width: 80%;
     height: 50%;
 }
+
+.pozic {
+    border: 2px solid black;
+    position: static;
+    left: 50px;
+    top: 100px;
+}
+
+.z-index{
+    background-color: green;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 15px;
+    top: 100px;
+    z-index: -1;
+}
+
+.obtekani {
+    border: 2px solid black;
+    
+}
+
+img {
+    float: right;
+}
