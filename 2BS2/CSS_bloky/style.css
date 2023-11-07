@@ -21,3 +21,10 @@
     width: 90%;
     height: 50%;
 }
+
+.owerflow {
+    border: 1px solid green;
+    min-width: 100px;
+    min-height: 50px;
+    overflow: auto;
+}
