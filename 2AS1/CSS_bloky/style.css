@@ -10,6 +10,7 @@
     max-height: 5000px;
     min-width: 50px;
     vertical-align: top;
+    background-color: white;
 }
 
 .poznamka {
@@ -36,3 +37,37 @@
     border-color: red;
     width: 100%; 
 }
+
+.pozice-rel {
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    position: relative;
+    top: 250px;
+    left: 50px;
+    right: 100px;
+    clear: left; 
+}
+
+.pozice-abs {
+    border-width: 3px;
+    border-style: solid;
+    border-color: green;
+    background-color: red;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    right: 100px; 
+    z-index: -1;
+}
+
+.obtekani {
+    border-width: 3px;
+    border-style: solid;
+    border-color: yellow; 
+}
+
+.obtekani img {
+    float: left;
+}
+
