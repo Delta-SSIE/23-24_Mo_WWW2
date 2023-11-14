@@ -1,0 +1,48 @@
+html {
+    font-family:'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+.header {
+    background-color: bisque;
+    border: 5px solid white;
+    text-align: center;
+    margin: 5px;
+    padding: 3px;
+}
+
+.header h1 {
+    font-size: 40pt;
+}
+
+.body {
+    background-color: bisque;
+    border: 5px solid white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sloupec {
+    display: inline-block;
+    width: 500px;
+    text-align: justify;
+}
+
+.sloupec h1 {
+    font-style: italic;
+}
+
+.footer {
+    background-color: bisque;
+    border: 5px solid white;
+    margin: 5px;
+    padding: 3px;
+    font-style: italic;
+}
+
+.sloupec a {
+    color: red;
+    text-align: center;
+    display: block;
+}
