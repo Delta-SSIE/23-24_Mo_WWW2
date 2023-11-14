@@ -41,6 +41,11 @@
     
 }
 
-img {
-    float: right;
+.obtekani img {
+    float: left;
+}
+
+.neobtekani {
+    border: 2px solid red;
+    clear: left;
 }
