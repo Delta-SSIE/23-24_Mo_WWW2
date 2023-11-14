@@ -1,0 +1,73 @@
+html {
+    background-color: lightgray;
+}
+
+header {
+    background-color: beige;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 20px 10px;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+nav {
+    font-size: 40px;
+    background-color: beige;
+    padding: 1px 3px;
+    margin: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    border: 3px solid white;
+    background-color: bisque;
+}
+
+nav ul :hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+main  {
+    background-color: beige;
+    margin: 10px;
+    text-align: center;
+    width: 80%;
+    display: inline-block;
+}
+
+section {
+    display: inline-block;
+    padding: 5px;
+    width: 500px;
+}
+
+article {
+    display: inline-block;
+    padding: 5px;
+    width: 500px;
+}
+
+aside {
+    display: inline-block;
+    background-color: beige;
+    width: 18%;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: beige;
+    margin: 10px;
+    padding: 5px;
+    font-style: italic;
+}
