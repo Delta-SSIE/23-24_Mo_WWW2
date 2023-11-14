@@ -1,0 +1,24 @@
+.text {
+    border: 3px solid black;
+    background-color: white;
+    z-index: -1;
+}
+
+.relative {
+    border: 3px solid red;
+    background-color: lightcoral;
+    position: relative;
+    left: 100px;
+    top: 100px;
+    z-index: 2;
+}
+
+.absolute {
+    border: 3px solid green;
+    background-color: lightgreen;
+    position: fixed;
+    left: 100px;
+    top: 200px;
+    z-index: 1;
+    
+}
