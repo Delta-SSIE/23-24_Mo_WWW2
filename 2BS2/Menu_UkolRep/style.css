@@ -1,0 +1,25 @@
+nav ul {
+    list-style-type: none;
+    width: 250px;
+}
+
+nav ul li {
+    border: 1px solid black;
+    padding: 5px 0px 5px 25px;
+    background-color: rgb(85, 121, 192);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul :hover {
+    background-color: #7F9DD7;
+    font-weight: bold;
+}
+
+nav .active {
+    background-color: #0F347C;
+}
