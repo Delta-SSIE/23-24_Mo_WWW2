@@ -1,0 +1,27 @@
+
+nav ul {
+    list-style-type: none;
+    width: 200px;
+}
+
+nav ul :hover {
+    background-color: #7FA1DF;
+    font-weight: bold;
+}
+
+nav li {
+    background-color: #5580CF;
+    padding: 10px 0px 10px 15px;
+    border-left: 5px solid #0C398A;
+    border-right: 5px solid #7FA1DF;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.active {
+    background-color: #0C398A;
+}
