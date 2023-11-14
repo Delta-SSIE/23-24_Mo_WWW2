@@ -35,3 +35,10 @@
     color: blueviolet;
     display: block;
 }
+
+.overflow {
+    border: 3px solid green;
+    width: 250px;
+    height: 150px;
+    overflow: auto;
+}
