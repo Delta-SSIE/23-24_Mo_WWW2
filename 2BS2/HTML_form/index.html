@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <form action="">
+    <fieldset>
+        <legend>Osobní údaje: </legend>
+        <label for="jmeno">Jméno uchazeče: </label>
+        <input type="text" id="jmeno" name="jmeno" placeholder="Igor Omáčka" required autofocus>
+        <br>
+        <label for="date">Datum narození: </label>
+        <input type="date" name="brith_date" id="date">
+    </fieldset>
+        <fieldset>
+            <legend>Otázky k zaměstatní:</legend>
+        <label for="niz_mag">Nižší management</label>
+        <input type="radio" id="niz_mag" name="pozice">
+        <label for="vys_mag">Vyšší management</label>
+        <input type="radio" id="vys_mag" name="pozice">
+        <br>
+        <label for="check">Zaškrtnutím povolujete zacházení s osobními údaji firmou X: </label>
+        <input type="checkbox" name="check" id="check">
+        <br>
+        <label for="city">Vyber město ve kterém chceš pracovat: </label>
+        <select name="city" id="city" required>
+        <optgroup label="Čechy">
+            <option value="HK">Hradec Králové</option>
+            <option value="Prag">Praha</option>
+        </optgroup>
+        <optgroup label="Morava">
+            <option value="Ostr">Ostrava</option>
+            <option value="Brno">Brno</option>
+        </optgroup>
+        </select>
+        <br>
+
+        <label for="mo">Zde napiš svůj motivační dopis: </label>
+        <textarea name="mo_dopis" id="mo" cols="20" rows="15"></textarea>    
+    </fieldset>
+    <input type="submit">
+
+</form>
+    
+</body>
+</html>
