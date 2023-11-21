@@ -15,3 +15,10 @@ header h1 {
     color: navy;
     font-size: 40pt;
 }
+
+nav {
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 5px;
+    border: 3px solid black;
+}
