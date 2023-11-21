@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_forms</title>
+</head>
+<body>
+    
+    <form action="">
+        <fieldset>
+        <legend>Osobní údaje</legend>
+        <label for="name">Jméno uchazeče: </label>
+        <input type="text" name="name" id="name" placeholder="Richard Novák" autofocus>
+        <br>
+        <label for="brith_date">Zadej rok narození:</label>
+        <input type="date" name="brith_date" id="brith_date">
+        <br>
+        <label>Vyber svůj gender: </label>
+        <label for="male">Muž</label>
+        <input type="radio" name="gender" id="male">
+        <label for="female">Žena</label>
+        <input type="radio" name="gender" id="female">
+        <label for="other">Ostatní</label>
+        <input type="radio" name="gender" id="other">
+        <br>
+        </fieldset>
+
+        <label for="check">Zaškrťněte, že souhlasíte se zpracováním osobních údajů: </label>
+        <input type="checkbox" name="check" id="check">
+        <br>
+
+        <label for="city">Vyber město ve kterém se ucházíš o práci: </label>
+        <select name="city" id="city">
+            <optgroup label="Čechy">
+            <option value="HK">Hradec Králové</option>
+            <option value="Pard">Pardubice</option>
+            <option value="Prag">Praha</option>
+            </optgroup>
+            <optgroup label="Morava">
+            <option value="Brno">Brno</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="mot_dop">Zde napište motivační dopis</label>
+        <textarea name="mot_dop" id="mot_dop" cols="30" rows="10"></textarea>
+
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+</html>
