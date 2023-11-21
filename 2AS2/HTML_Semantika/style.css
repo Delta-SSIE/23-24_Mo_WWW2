@@ -40,7 +40,6 @@ nav ul li {
 }
 
 nav ul :hover {
-    border: 3px solid black;
     background-color: navy;
     color: whitesmoke;
     font-weight: bold;
