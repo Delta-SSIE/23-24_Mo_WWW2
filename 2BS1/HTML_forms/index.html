@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_forms</title>
+</head>
+<body>
+
+    <form action="">
+    <fieldset>
+        <legend>Osobní údaje uchazeče:</legend>
+        <label for="jmeno">Zadejte své celé jméno:</label>
+        <input type="text" id="jmeno" placeholder="Karel Omáčka" required autofocus>
+        <br>
+        <label for="datum">Zadejte datum narození:</label>
+        <input type="date" id="datum">
+        <br>
+        <label for="radio_ceo">Hlasím se na pozici CEO</label>
+        <input type="radio" value="CEO" id="radio_ceo" name="pozice">
+        <label for="radio_mag">Hlasím se na pozici v Magmentu</label>
+        <input type="radio" value="Mag" id="radio_mag" name="pozice">
+        <label for="radio_copy">Hlasím se na pozici Copywriter</label>
+        <input type="radio" value="Copy" id="radio_copy" name="pozice">
+        <br>
+        <label for="souhlas">Souhlasíte s získáním vašich osobních údajů</label>
+        <input type="checkbox" name="souhlas" id="souhlas">
+    </fieldset>
+        <br>
+        <label for="mesto">Zadejte město ve kterém se o práci ucházíte</label>
+        <select name="mesto" id="mesto">
+            <optgroup label="Čechy">
+            <option value="Prague">Praha</option>
+            <option value="HK">Hradec Králové</option>
+            </optgroup>
+            <optgroup label="Morava">
+            <option value="Brno">Brno</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="mot_dop">Zde napište svůj motivační dopis</label>
+        <textarea name="mot_dop" id="mot_dop" cols="50" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
