@@ -1,0 +1,57 @@
+html {
+    background-color: bisque;
+    font-family: Helvetica;
+}
+
+#page {
+    background-color: white;
+    border: 1px solid black;
+    width: 1100px;
+    margin: 15px auto;
+}
+
+header {
+    text-align: center;
+    padding: 3px;
+    border-bottom: 1px solid black;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: x-small;
+    color: gray;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+
+#central {
+    margin: 5px;
+    height: 500px;
+}
+
+main {
+    width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 3px;
+
+}
+
+nav {
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 3px;
+}
+
+aside {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 3px;
+    height: 500px;
+    overflow: auto;
+}
