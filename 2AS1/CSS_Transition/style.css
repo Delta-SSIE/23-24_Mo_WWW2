@@ -1,0 +1,17 @@
+#box {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    transition: transform 10s, width 4s, height 4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 2s;
+}
+
+#box:hover {
+   transform: rotate(360deg);
+   height: 50px;
+   width: 50px;
+}
