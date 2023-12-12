@@ -1,0 +1,25 @@
+@keyframes barva {
+    from {background-color: yellow;}
+    to {background-color: blue;}
+}
+
+@keyframes pad {
+    0% {transform: translateX(0); background-color: yellow;}
+    25% {transform: translateX(150px);background-color: green;}
+    50% {transform: translateX(300px);background-color: blue;}
+    75% {transform: translateX(450px);background-color: red;}
+    100% {transform: translateX(600px);background-color: black;}
+}
+
+#box {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    animation-name: pad;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
