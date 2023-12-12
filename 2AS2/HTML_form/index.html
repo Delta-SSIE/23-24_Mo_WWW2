@@ -11,7 +11,7 @@
         <fieldset>
             <legend>Osobní údaje:</legend>
             <label for="jmeno">Zadej své jméno: </label>
-            <input type="text" id="jmeno" name="jmeno">
+            <input type="text" id="jmeno" name="jmeno" placeholder="Jan Novák" required autofocus>
             <br>
             <label for="M">Muž</label>
             <input type="radio" value="M" id="M" name="Gender">
@@ -19,6 +19,9 @@
             <input type="radio" value="F" id="F" name="Gender">
             <label for="O">Ostatní</label>
             <input type="radio" value="O" id="O" name="Gender">
+            <br>
+            <label for="brith_date">Datum narození: </label>
+            <input type="date" name="brith_date" id="brith_date" required>
         </fieldset>
         <br>
         <label for="city">Vyber město, kde chceš být zaměstnán: </label>
@@ -34,6 +37,8 @@
         <br>
         <label for="letter">Motivační dopis: </label>
         <textarea name="letter" id="letter" cols="50" rows="15"></textarea>
+        <br>
+        <input type="submit">
     </form>
 </body>
 </html>
