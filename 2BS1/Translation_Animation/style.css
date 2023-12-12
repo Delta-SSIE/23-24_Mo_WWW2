@@ -19,7 +19,7 @@
     height: 250px;
     background-color: red;
     position: relative;
-    top: 300px;
+    top: 350px;
     left: 250px;
     transition: left 10s;
 }
@@ -27,3 +27,24 @@
 #box2:hover {
     left: 750px;
 }
+
+.transition-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 250px;
+    position: relative;
+    transition: background-color 3s, color 3s, transform 3s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  .transition-btn:hover {
+    background-color: red;
+    color: black;
+    transform: scale(2);
+  }
