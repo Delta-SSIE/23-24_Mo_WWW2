@@ -48,3 +48,15 @@
     color: black;
     transform: scale(2);
   }
+
+  /* Box styles */
+.rotate-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transition: transform 10s;
+  }
+
+  .rotate-box:hover {
+    transform: rotate(360deg) rotateX(360deg);
+  }
