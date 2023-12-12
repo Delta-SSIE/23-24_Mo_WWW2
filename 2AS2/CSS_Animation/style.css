@@ -1,0 +1,20 @@
+@keyframes barva {
+    0% {background-color: blue; transform: translateX(0px);}
+    25% {background-color: yellow; transform: translateX(250px);}
+    50% {background-color: red; transform: translateX(500px);}
+    75% {background-color: green; transform: translateX(750px);}
+    100% {background-color: black; transform: translateX(1000px);}
+}
+
+#box {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    background-color: blue;
+    animation-name: barva;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
