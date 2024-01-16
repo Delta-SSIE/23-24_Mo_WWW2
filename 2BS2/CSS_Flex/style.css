@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    height: 250px;
+    background: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: black;
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    background-color: yellow;
+    height: 300px;
+    flex: 2;
+}
+section {
+    background-color: brown;
+    flex: 3;
+    height: 300px;
+}
+
+footer {
+    display: flex;
+    height: 250px;
+    background: red;
+
+}
