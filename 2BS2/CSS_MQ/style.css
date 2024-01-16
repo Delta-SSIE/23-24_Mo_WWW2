@@ -21,6 +21,22 @@
 }
 
 
+@media screen and (max-width:600px) {
+    #text {
+        color: pink;
+        font-size: smaller;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:920px) {
+    #text {
+        color: red;
+        font-size: larger;
+        text-decoration: underline;
+    }   
+}
+
 h1 {
     font-size: 50px;
 }
