@@ -1,8 +1,13 @@
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
   background-color: #2196F3;
   padding: 10px;
+  gap: 10px;
+  grid-template-areas: 
+  'header header header header header'
+  'menu main main ads ads'
+  'menu main main ads ads'
+  'foot foot foot foot foot';
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -10,4 +15,20 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+}
+
+#item1 {
+  grid-area: header;
+}
+#item2 {
+  grid-area: main;
+}
+#item3 {
+  grid-area: foot;
+}
+#item4 {
+  grid-area: ads;
+}
+#item5 {
+  grid-area: menu;
 }
