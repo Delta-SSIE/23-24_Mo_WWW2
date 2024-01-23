@@ -25,9 +25,29 @@
   }
 
   .grid-container2 {
+    margin-top: 25px;
     display: grid;
-    grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
     gap: 10px;
+    grid-template-areas: 
+    'head head head head'
+    'menu main main right'
+    'menu foot foot foot';
+  }
+
+  .item1 {
+    grid-area: head;
+  }
+  .item2 {
+    grid-area: menu;
+  }
+  .item3 {
+    grid-area: main;
+  }
+  .item4 {
+    grid-area: right;
+  }
+  .item5 {
+    grid-area: foot;
   }
