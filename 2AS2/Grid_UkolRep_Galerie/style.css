@@ -1,0 +1,28 @@
+#galerie  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#galerie img {
+    width: 100%;
+    height: 100%;
+    transition: transform 5s;
+}
+
+#galerie img:hover {
+    transform: scale(1.5);
+}
+
+#les {
+    grid-column: 3/5;
+}
+
+#most {
+    grid-row: 2/4;
+}
+
+#krajina {
+    grid-row: 3/5;
+    grid-column: 2/5;
+}
