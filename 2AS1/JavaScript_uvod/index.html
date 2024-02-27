@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        //Výpis do konzole
+        console.log('Hello world!');
+
+        //Deklarace proměnné
+        let pro1;
+        pro1 = 1;
+        console.log(pro1);
+
+        //Deklarace proměnné s hodnotou
+        let pro2 = 'Hello World!'
+        console.log(pro2);
+
+        //Změna hodnoty proměnné
+        pro1 = pro1+pro1;
+        console.log(pro1);
+
+        //Práce s řetězci (string)
+        console.log(pro2.length);
+        console.log(pro2[0]);
+        console.log(pro2[3]);
+        console.log(pro2[pro2.length-1]);
+
+        //Výpis stringu s proměnnými (Backticks)
+        console.log(`Slovo dne je ${pro2} a dnešní číslo je ${pro1}`);
+
+        //Naplnění proměnné hodnotou z jiné proměnné!
+        let veta = 'Tohle je skvělé slovo ' + pro2;
+        console.log(veta);
+
+    </script>
+</body>
+</html>
