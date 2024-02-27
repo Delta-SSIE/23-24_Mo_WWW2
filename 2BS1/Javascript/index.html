@@ -83,13 +83,67 @@
         y = ScitejLepsi(x,5);
         console.log(y);
 
-        //Globální proměnná
+        //Globální proměnná (definovaná mimo funkci)
         let zdraveni = 'Ahoooj!';
         function Ahoj() {
             zdraveni = 'Čus!';
         }
         Ahoj();
         console.log(zdraveni);
+
+        
+        //UkolRep - Doživotní zásoba (funkce)
+        function dozivotniZasoba(aktuVek, vekDozit, denSpot) {
+            return (vekDozit-aktuVek)*360*denSpot;
+        }
+        console.log(`Až do konce života budeš potřebovat ${dozivotniZasoba(30,80,5)} balení.`)
+        console.log(`Až do konce života budeš potřebovat ${dozivotniZasoba(15,105,10)} balení.`)
+
+        //Podmínka - If (striktní vs. nestriktní rovnost)
+
+        if(5 == '5'){
+            console.log("To je v pořádku!")
+        } else {
+            console.log("To není v pořádku!")
+        }
+
+        if(5 === '5'){
+            console.log("To je v pořádku!")
+        } else {
+            console.log("To není v pořádku!")
+        }
+
+        //Logické operátory AND a OR
+        if (5 == '5' && 5 === '5') {
+            console.log("To je v pořádku!")
+        } else {
+            console.log("To není v pořádku!")
+        }
+
+        if (5 == '5' || 5 === '5') {
+            console.log("To je v pořádku!")
+        } else {
+            console.log("To není v pořádku!")
+        }
+
+        //Smyčka While
+        let z = 0;
+        while(z < 5) {
+            console.log(z);
+            z++;
+        }
+
+        //Smyčka Do While
+        let a = 0;
+        do {
+            a++;
+            console.log(a);
+        } while (a < 5)
+
+        //Smyčka for cyklu
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+        }
     </script>
 </body>
 </html>
