@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        //Výpis do konzole
+        console.log('Hello world!')
+        
+        //Deklarace proměnné
+        let promenna = 1;
+        let druhaPromenna;
+        druhaPromenna = 'Hello World';
+        console.log(promenna);
+        console.log(druhaPromenna);
+
+        //Práce s řetězci
+        console.log(druhaPromenna.length);
+        console.log(druhaPromenna[0]);
+        console.log(druhaPromenna[druhaPromenna.length-1]);
+
+        //Vypis stringu s proměnnými
+        console.log(`Dnešní slovo je ${druhaPromenna} a dnešní číslo je ${promenna}`);
+
+        //Hodnota proměnné určené součetm hodnot jiných proměnných
+        let soucet = promenna+promenna+promenna;
+        console.log(soucet);
+
+        //Změna typu proměnné
+        let x = 5;
+        console.log(x);
+        x = "hello";
+        console.log(x);
+    </script>
+</body>
+</html>
