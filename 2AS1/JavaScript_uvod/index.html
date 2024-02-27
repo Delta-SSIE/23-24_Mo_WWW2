@@ -43,6 +43,62 @@
         let spotreba = 2;
         console.log(`Až do konce života v roce ${aktuRok+(doziti-aktuVek)} budeš potřebovat ${(doziti-aktuVek)*360*2} šálků kávy"`);
 
+        //Funkce
+        function Pozdrav() {
+            console.log('Ahoj!');
+        }
+        //Volání funkce
+        Pozdrav();
+        Pozdrav();
+        Pozdrav();
+
+        //Funkce s parametry (argumenty)
+        function LepsiPozdrav(jmeno) {
+            console.log(`Ahoj ${jmeno}`);
+        }
+        //Volání funkce s argumentem
+        LepsiPozdrav('Jene');
+        LepsiPozdrav('Dane');
+        LepsiPozdrav('Jarmilo');
+
+        function Scitej(x,y) {
+            console.log(x+y);
+        }
+        Scitej(4,5);
+        Scitej(pro1,pro1);
+
+        //Funkce s návratovou hodnotou
+        function ScitejVrat(a,b) {
+            return a+b
+        }
+
+        let cislo = ScitejVrat(5,5);
+        console.log(cislo);
+        console.log(ScitejVrat(10,10));
+
+        //Obor platnosti - lokalní proměnná ve funkci
+
+        function Ahoj() {
+            let z = 5;
+            console.log(z);
+        }
+
+        Ahoj();
+        // console.log(z);
+
+        //Obor platnosti - globální proměnná definovaná mimo funkci
+
+        let u = 5;
+
+        function Zmen() {
+            u = u*u;
+        }
+
+        console.log(u);
+
+        Zmen();
+        console.log(u);
+
     </script>
 </body>
 </html>
