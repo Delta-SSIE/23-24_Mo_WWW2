@@ -91,6 +91,62 @@
         funkceU();
         console.log(u);
 
+        //UkolRep - Dozivotni zasoby (funkce)
+        function dozivotniZasoba(vek,doziti,spotreba){
+            return (doziti-vek)*360*spotreba
+        }
+
+        console.log(dozivotniZasoba(16, 80, 0.5));
+        console.log(dozivotniZasoba(53, 54, 1));
+
+        //Podmínka IF - striktní a nestriktní rovnost
+
+        if (5 == '5'){
+            console.log('Je to okej!')
+        } else {
+            console.log('Není to okej!')
+        }
+
+        if (5 === '5'){
+            console.log('Je to okej!')
+        } else {
+            console.log('Není to okej!')
+        }
+
+        if (5 === 5){
+            console.log('Je to okej!')
+        } else {
+            console.log('Není to okej!')
+        }
+
+        //Logické operátory And a Or
+        if (5 == '5' || 5 === '5'){
+            console.log('Je to okej!')
+        } else {
+            console.log('Není to okej!')
+        }
+
+        if (5 == '5' && 5 === '5'){
+            console.log('Je to okej!')
+        } else {
+            console.log('Není to okej!')
+        }
+
+        //Short handed zápis podmínky
+        let odpoved = (10 > 18) ? "Podminka plati" : "Podminka neplati";
+        console.log(odpoved);
+
+        //While cyklus
+        let poc = 0;
+        while(poc < 5) {
+            console.log(poc);
+            poc++;
+        }
+
+        //For cyklus
+        for(let i = 0; i < 5; i++){
+            console.log(i);
+        }
     </script>
 </body>
 </html>
