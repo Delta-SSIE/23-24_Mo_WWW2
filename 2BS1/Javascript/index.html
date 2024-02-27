@@ -38,6 +38,58 @@
         //Výpis proměnných v rámci stringu
         console.log(`Ahoj světě, což se anglicky řekne ${hello} a dneska je venku ${destCislo} stupňů!`);
 
+        //UkolRep - Doživotní zásoba
+        let rok = 2024;
+        let vek = 27;
+        let doziti = 71;
+        let kava = 2;
+        let spotreba = (doziti-vek)*360*2;
+        console.log(`Až do konce života v roce ${rok+(doziti-vek)} budeš potřebovat ${spotreba} káv!`);
+
+        //Funkce
+        function Pozdrav() {
+            console.log('Ahoj!');
+        }
+
+        //Volání funkce
+        Pozdrav();
+        Pozdrav();
+        Pozdrav();
+
+        //Funkce a argumenty/parametry
+        function LepsiPozdrav(jmeno) {
+            console.log(`Ahoj ${jmeno}!`);
+        }
+
+        function Scitej(x,y) {
+            console.log(x+y);
+        }
+
+        //Volání funkce s argumenty
+        LepsiPozdrav('Dane');
+        LepsiPozdrav('Honzo');
+        LepsiPozdrav('Marku');
+
+        Scitej(5,4);
+        Scitej(x,y);
+
+        //Funkce s návratovou hodnotou
+        function ScitejLepsi(x,y) {
+            return x+y;
+        }
+
+        //Volání funkce s návratovou hodnotou
+        console.log(ScitejLepsi(5,4))
+        y = ScitejLepsi(x,5);
+        console.log(y);
+
+        //Globální proměnná
+        let zdraveni = 'Ahoooj!';
+        function Ahoj() {
+            zdraveni = 'Čus!';
+        }
+        Ahoj();
+        console.log(zdraveni);
     </script>
 </body>
 </html>
