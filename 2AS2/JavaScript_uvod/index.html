@@ -35,6 +35,62 @@
         console.log(pro);
         pro = 'Hello';
         console.log(pro);
+
+        //UkolRep - Doživotní zásoby
+        let aktuRok = 2024;
+        let aktuVek = 27;
+        let prumDoz = 76;
+        let prumSpot = 2;
+        console.log(`Až do konce života v roce ${aktuRok+(prumDoz-aktuVek)} budeš potřebovat ${(prumDoz-aktuVek)*360*prumSpot} šálků kávy!`);
+
+        //Funkce
+        function pozdrav() {
+            console.log('Ahoooj!');
+        }
+        //Volání funkce
+        pozdrav();
+        pozdrav();
+        pozdrav();
+
+        //Funkce s parametry
+        function lepsiPozdrav(jmeno) {
+            console.log(`Ahoj ${jmeno}!`);
+        }
+        //Volání funkce s argumentem
+        lepsiPozdrav('Michale');
+        lepsiPozdrav('Patriku');
+        lepsiPozdrav('Aničko')
+
+        //Funkce s návratovou hodnotou
+        function Scitej(x,y){
+            return x+y;
+        }
+
+        console.log(Scitej(5,5));
+        let cislo = Scitej(10,50);
+        console.log(cislo);
+
+        //Lokální proměnná
+
+        function funkceLokal() {
+            let z = 5;
+            console.log(z);
+        }
+
+        funkceLokal();
+        //console.log(z);
+
+        //Globální proměnná
+
+        let u = 5;
+
+        function funkceGlobal() {
+            u = u*u;
+        }
+
+        console.log(u);
+        funkceGlobal();
+        console.log(u);
     </script>
 </body>
 </html>
