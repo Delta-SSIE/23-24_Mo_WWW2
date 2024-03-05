@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Pole</title>
+</head>
+<body>
+    <script>
+        //Deklarace a výpis pole
+        let pole = [1,5,6,8];
+        let poleZnaku = ["ahoj","cus","dobrý den"];
+        console.log(pole);
+        console.log(poleZnaku);
+
+        //Deklarace prázdného pole a naplnění prvky na konkrétní indexy
+        let novePole = [];
+        novePole[0] = "ahoj";
+        novePole[1] = "Hello";
+        console.log(novePole);
+
+        //Vkládání prvků pomocí push
+        novePole.push('cus');
+        console.log(novePole);
+
+        //for cyklus
+        for (let index = 0; index < poleZnaku.length; index++) {
+            console.log(poleZnaku[index]);
+            
+        }
+
+        //foreach v JS
+        for (let cislo of pole) {
+            console.log(cislo);
+        }
+
+        //Pole jako zásobník
+        pole.push(10);
+        console.log(pole);
+        pole.pop();
+        pole.pop();
+        console.log(pole);
+
+        //Pole jako fronta
+        pole.shift();
+        console.log(pole);
+        pole.unshift(25);
+        console.log(pole);
+        pole.unshift(30,35);
+        console.log(pole);
+
+        //Split
+        let text = "Ahoj,Bonjour,Hello,Aloha"
+        let poleText = text.split(',');
+        console.log(poleText);
+
+        //Join
+        console.log(pole.join('-'));
+    </script>
+</body>
+</html>

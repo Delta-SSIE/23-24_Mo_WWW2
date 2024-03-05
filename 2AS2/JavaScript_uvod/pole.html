@@ -13,49 +13,37 @@
         console.log(pole);
         console.log(poleZnaku);
 
-        //Deklarace prázdného pole a naplnění prvky na konkrétní indexy
-        let novePole = [];
-        novePole[0] = "ahoj";
-        novePole[1] = "Hello";
-        console.log(novePole);
+        let predmety = [];
+        predmety[0] = 5;
+        predmety[1] = 13;
+        console.log(predmety);
+        predmety.push(152);
+        console.log(predmety);
 
-        //Vkládání prvků pomocí push
-        novePole.push('cus');
-        console.log(novePole);
-
-        //for cyklus
-        for (let index = 0; index < poleZnaku.length; index++) {
-            console.log(poleZnaku[index]);
-            
-        }
-
-        //foreach v JS
-        for (let cislo of pole) {
+        for(let cislo of pole) {
             console.log(cislo);
         }
 
-        //Pole jako zásobník
-        pole.push(10);
-        console.log(pole);
-        pole.pop();
-        pole.pop();
-        console.log(pole);
+        predmety.push(100);
+        predmety.push(90);
+        console.log(predmety);
+        for (let index = 0; index < 3; index++) {
+            predmety.pop();  
+        }
+        console.log(predmety);
 
-        //Pole jako fronta
+        console.log(pole);
         pole.shift();
         console.log(pole);
-        pole.unshift(25);
-        console.log(pole);
-        pole.unshift(30,35);
+        pole.unshift(100,50);
         console.log(pole);
 
-        //Split
-        let text = "Ahoj,Bonjour,Hello,Aloha"
-        let poleText = text.split(',');
-        console.log(poleText);
+        let text = "Ahoj,Aloha,Hello,Bonjoure,Gutten Tag"
+        let polePozdrav = text.split(',');
+        console.log(polePozdrav);
+        console.log(pole.join(';'));
 
-        //Join
-        console.log(pole.join('-'));
+        
     </script>
 </body>
 </html>
