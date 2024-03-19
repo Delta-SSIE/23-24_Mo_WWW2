@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Pole</title>
+</head>
+<body>
+    <script>
+        let cisla = [1,2,5,6];
+        console.log(cisla);
+
+        let text = [];
+        text[0] = "Ahoj";
+        text[1] = "Cus";
+        console.log(text);
+
+        text.push("Hello");
+        text[1] = "Aloha";
+        console.log(text);
+        text.push("Bonjour","Gutten tag");
+        console.log(text);
+
+        for (let pozdrav of text){
+            console.log(pozdrav);
+        }
+
+        for (let i = 0; i < 3; i++){
+            text.pop();
+        }
+        console.log(text);
+
+        text.shift();
+        console.log(text);
+        text.unshift("Hello","Osel");
+        console.log(text);
+
+        let napis = "Ahoj,jak se máš,mám se dobře,co ty?"
+        let pole = napis.split(",");
+        console.log(pole);
+        console.log(pole.join(","));
+    </script>
+</body>
+</html>
