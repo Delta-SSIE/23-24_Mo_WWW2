@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_OOP</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let objekt = {};
+    objekt.barva = "zelená";
+    objekt.tvar = "koule";
+    console.log(objekt);
+
+    let auto = {
+        barva: "zelená",
+        znacka: "BMW",
+        km: 100000
+    }
+    console.log(auto);
+
+    //Tečková syntaxe
+    console.log(auto.barva);
+    console.log(auto.znacka);
+    auto.znacka = "Volvo";
+    console.log(auto.znacka);
+
+    //Závorková syntaxe
+    auto['barva'] = 'červená';
+    console.log(auto.barva);
+    let polozka = 'znacka';
+    auto[polozka] = 'Mercedes';
+    console.log(auto.znacka);
+    console.log(auto);
+
+    //pole a objekt jako položka v jiném objektu
+    let sklad = {
+        nazev: 'Sklad A',
+        lokace: 'Pardubice',
+        obsah: ['mouka','tvaroh','vejce','žito'],
+        skladnik: {jmeno:'Honza',vek:18}
+    }
+    console.log(sklad.obsah[0]);
+    console.log(sklad.skladnik.jmeno);
+
+    //Smazání položky
+    delete sklad.skladnik;
+    console.log(sklad);
+
+    //Pole objektů
+    let garaz = [
+        {znacka: 'volvo',barva: 'zelená'},
+        {znacka: 'bmw',barva: 'modré'},
+        {znacka: 'mercedes',barva: 'černé'}
+    ]
+
+    for(let auto of garaz){
+        console.log(auto.znacka + ' ' + auto.barva);
+    }
+
+    for(let polozka in sklad){
+        console.log(polozka);
+    }
+
+</script>
+</html>
