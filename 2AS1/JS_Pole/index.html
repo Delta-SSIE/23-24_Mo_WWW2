@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Pole</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Deklarace pole
+    let cisla = [5,10,12,50,18];
+    console.log(cisla);
+
+    let predmety = [];
+    predmety[0] = "housle";
+    predmety[1] = "kužel";
+    predmety[2] = 3;
+    console.log(predmety);
+
+    //přidání prvku do pole
+    predmety.push("kytara","skřín");
+    console.log(predmety);
+
+    //foreach
+    for(let predmet of predmety){
+        console.log(predmet);
+    }
+
+    //pop()
+    for(let i = 0; i < 2;i++) {
+        predmety.pop();
+    }
+    console.log(predmety);
+
+    //shift a unshift
+    predmety.shift();
+    console.log(predmety);
+    predmety.unshift("míč","kolo","žehlička");
+    console.log(predmety);
+
+    console.log(predmety.slice(-2));
+    console.log(predmety.slice(2,5));
+
+    //split
+    let text = "Ahoj, jak se máš, já se mám dobře, co ty?"
+    let pole = text.split(',');
+    console.log(pole);
+
+    //join
+    console.log(pole.join(','));
+
+
+</script>
+</html>
