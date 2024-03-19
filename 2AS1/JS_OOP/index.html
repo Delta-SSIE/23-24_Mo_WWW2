@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_OOP</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let objekt = {};
+    objekt.barva = "Zelená";
+
+    let auto = {
+        barva: 'červená',
+        znacka: 'BMW',
+        km: 100000
+    }
+    console.log(objekt);
+    console.log(auto);
+
+    //Tečková syntaxe
+    let barva_auta = auto.barva;
+    auto.barva = "růžová";
+    console.log(barva_auta);
+    console.log(auto);
+
+    //Zavorková syntaxe
+    auto['barva'] = 'modrá';
+    console.log(auto);
+    let polozka = 'znacka';
+    auto[polozka] = 'Volvo';
+    console.log(auto);
+</script>
+</html>
