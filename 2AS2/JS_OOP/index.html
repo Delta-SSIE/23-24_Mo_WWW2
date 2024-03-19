@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_OOP</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Deklarace objektu a jeho položek
+    let objekt = {};
+    objekt.barva = "zelená";
+    objekt.tvar = "koule";
+    console.log(objekt);
+
+    //Deklarace objektu s položky
+    let auto = {
+        barva: 'modrá',
+        znacka: 'Volvo',
+        km: 1000000
+    }
+    console.log(auto);
+
+    //Tečková syntaxe
+    console.log(auto.barva);
+    auto.barva = 'červená';
+    console.log(auto.barva);
+
+    //Zavorková syntaxe
+    auto['barva'] = 'hnědá';
+    console.log(auto);
+    let polozka = 'znacka';
+    auto[polozka] = 'BMW';
+    console.log(auto);
+
+    //Smazání vlastnosti (položky)
+    delete auto.znacka;
+    console.log(auto);
+
+    //Objekt a pole jako položka objektu
+    let sklad = {
+        lokaci: 'Pardubice',
+        obsah: ['mouka','kečup','mýdlo','rampouch'],
+        skladnik: {jmeno: 'Pepa',vek: 18}
+    };
+    console.log(sklad.obsah[0]);
+    console.log(sklad.skladnik.jmeno);
+
+    //Pole objektů
+    let garaz = [
+        {znacka: 'Volvo',barva: 'žlutá', km:50},
+        {znacka: 'BMW',barva: 'žlutá', km:50000},
+        {znacka: 'Mercedes',barva: 'modrý', km:500},
+        {znacka: 'Volvo',barva: 'červené', km:10},
+    ];
+    for(let auto of garaz){
+        console.log(auto.znacka + ' ' + auto.barva + ' ' + auto.km);
+    }
+
+    //Procházení položek daného objektu
+    for(let polozka in sklad){
+        console.log(polozka + ' ' + sklad[polozka]);
+    }
+
+</script>
+</html>
