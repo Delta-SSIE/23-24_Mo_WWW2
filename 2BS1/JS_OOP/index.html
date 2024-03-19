@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_OOP</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Definice objektu
+    let objekt = {};
+    //Přiřazení atributu/vlastnosti objektu s hodnotou
+    objekt.barva = "Zelená";
+    console.log(objekt);
+
+    let auto = {
+        znacka: "BMW",
+        barva: "žlutá"
+    };
+
+    console.log(auto);
+
+    //Tečková syntaxe
+    let barva_auta = auto.barva;
+    auto.barva = "červená"
+    console.log(barva_auta);
+
+    //zavorková syntaxe
+    auto['barva'] = "bílá";
+    console.log(auto);
+
+    //Výpis atributu pomocí názvu položky v proměnné
+    let polozka = "barva";
+    console.log(auto[polozka]);
+
+    //Objekt s polem a jiným objektem jako položkou
+    let moje_auto = {
+        nazev: "Super auto",
+        rok_vyroby: 1989,
+        obsah_kufru: ["taška na nákup","náhradní pneu","lékarnička"],
+        pasazer: {jmeno: "Adam",vek: 19}
+    }
+
+    console.log(moje_auto.obsah_kufru[0]);
+    console.log(moje_auto.pasazer.jmeno);
+    console.log(moje_auto);
+
+    //Smazání položky z objektu
+    delete moje_auto.pasazer;
+    console.log(moje_auto);
+
+    let garaz = [
+        {znacka: "BMW",majitel: "Lukáš"},
+        {znacka: "Volwo",majitel: "Adam"}
+    ]
+
+    for (let objekt of garaz){
+        console.log(`V garáži je auto značky ${objekt.znacka}, které patří ${objekt.majitel
+        }`);
+    }
+</script>
+</html>
