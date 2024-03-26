@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_UkolRep_RocniObdobi</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //Deklarace pole objektů s atributy nazev
+    rocniObdobi = [
+        {nazev: "Zima"},
+        {nazev: "Jaro"},
+        {nazev: "Léto"},
+        {nazev: "Podzim"}
+    ];
+    //Přidání atributu každému objektu v poli s odkazem na jiný objekt v poli
+    rocniObdobi[0].pristiObdobi = rocniObdobi[1];
+    rocniObdobi[1].pristiObdobi = rocniObdobi[2];
+    rocniObdobi[2].pristiObdobi = rocniObdobi[3];
+    rocniObdobi[3].pristiObdobi = rocniObdobi[0];
+
+    //Výpis pole
+    console.log(rocniObdobi);
+
+
+    function predchoziObdobi(obdobi) {
+    //Načtení objektu z referencí daného objektu 
+    let pristi_obdobi = obdobi.pristiObdobi.pristiObdobi.pristiObdobi
+    return pristi_obdobi; // odkaz
+}
+    //zavolání funkce se všemi ročními obdobími
+    console.log(predchoziObdobi(rocniObdobi[0]));
+    console.log(predchoziObdobi(rocniObdobi[1]));
+    console.log(predchoziObdobi(rocniObdobi[2]));
+    console.log(predchoziObdobi(rocniObdobi[3]));
+</script>
+</html>
