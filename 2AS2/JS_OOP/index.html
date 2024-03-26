@@ -93,7 +93,90 @@
     
     //Konec úlohy z Replitu
 
-    
+    //Problematiky předávání odkazů a hodnot
 
+    //Ukládání hodnoty string, int, bool
+    let cislo1 = 5;
+    let cislo2 = cislo1;
+    cislo1 = 8;
+    console.log(cislo2);
+
+    let slovoA = 'Ahoj';
+    let slovoB = slovoA;
+    slovoA = 'Čus';
+    console.log(slovoB);
+
+    //Ukládání reference array, obj
+    let poleA = [1,2,3];
+    let poleB = poleA;
+    poleA[0] = 0;
+    console.log(poleB[0]);
+
+    let objektA = {nazev: 'Koule'};
+    let objektB = objektA;
+    objektA.nazev = 'Kužel';
+    console.log(objektB.nazev);
+
+    //Metody
+    let ctverecAB = {
+        hrana: 5,
+        //definice metody uvnitř deklarace objektu
+        obvod: function() {
+            console.log(this.hrana*4);
+        }
+    
+    };
+
+    //Metoda k objektu
+    ctverecAB.obsah = function() {
+        console.log(this.hrana*this.hrana);
+    }
+
+    ctverecAB.obsah();
+    ctverecAB.obvod();
+
+    //Třídy
+
+    class Ctverec {
+        constructor() {
+            this.hrana = 0;
+        }
+
+        obvod() {
+            console.log(this.hrana*4);
+        }
+
+        obsah() {
+            console.log(this.hrana*this.hrana);
+        }
+    }
+
+    //Tvorba objektu z třídy Ctverec
+    let ctverecA = new Ctverec();
+    let ctverecB = new Ctverec();
+    ctverecA.hrana = 5;
+    ctverecB.hrana = 25;
+    ctverecA.obsah();
+    ctverecA.obvod();
+    ctverecB.obsah();
+    ctverecB.obvod();
+
+    //Třída s konstruktorem s parametry
+
+    class Clovek {
+        constructor(jmeno, vek) {
+            this.name = jmeno;
+            this.age = vek;
+        }
+
+        predstavSe() {
+            console.log(`Ahoj, já jsem ${this.name} a je mi ${this.age} let!`);
+        }
+    }
+
+    let libor = new Clovek('Libor Gombár',18);
+    let viktor = new Clovek('Viktor Dolák',81);
+    libor.predstavSe();
+    viktor.predstavSe();
 </script>
 </html>
