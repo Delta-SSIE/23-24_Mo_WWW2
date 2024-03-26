@@ -64,5 +64,36 @@
         console.log(polozka + ' ' + sklad[polozka]);
     }
 
+    //UkolRep - Seznam knih
+    let knihy = [
+        {nazev:'Bíla nemoc', autor:'Karel Čapek', precteno: true},
+        {nazev:'Král Lávra', autor:'Karel H. Borovský', precteno: false},
+        {nazev:'Kytice', autor:'Karel J. Erben', precteno: true}
+    ]
+
+    function popisKnihy(kniha) {
+        return `${kniha.nazev}, autor ${kniha.autor}`;
+    }
+
+    console.log(popisKnihy(knihy[2]));
+
+    function popisKnihy2(kniha) {
+        let text;
+        if(kniha.precteno) {
+            text = `Už jsem četl knihu "${kniha.nazev}", jejím autorem je  ${kniha.autor}.`;
+        } else {
+            text = `Chci si přečíst knihu "${kniha.nazev}", jejím autorem je  ${kniha.autor}.`;
+        }
+        return text;
+    }
+
+    for(let a of knihy) {
+        console.log(popisKnihy2(a));
+    }
+    
+    //Konec úlohy z Replitu
+
+    
+
 </script>
 </html>
