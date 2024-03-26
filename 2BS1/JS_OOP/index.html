@@ -11,6 +11,7 @@
 <script>
     //Definice objektu
     let objekt = {};
+
     //Přiřazení atributu/vlastnosti objektu s hodnotou
     objekt.barva = "Zelená";
     console.log(objekt);
@@ -60,5 +61,38 @@
         console.log(`V garáži je auto značky ${objekt.znacka}, které patří ${objekt.majitel
         }`);
     }
+
+    //Úkol Replit - Seznam knih
+    //Pole objektů
+    let knihy = [
+        {nazev: "Havran", autor: "Edgar Alan Poe", precteno: false},
+        {nazev: "Král Lávra", autor: "Karel H. Borovský", precteno: true},
+        {nazev: "Bilá Nemoc", autor: "Karel Čapek", precteno: true}
+    ]
+    //Funkce pracující s objektem jako parametrem
+    function popisKnihy(kniha){
+        let popis =  `${kniha.nazev}, jejím autorem je ${kniha.autor}`;
+        return popis;
+    }
+    //Výpis návratové hodnoty z funkce popisKnihy
+    console.log(popisKnihy(knihy[0]));
+
+    function popisKnihy2(kniha){
+        let popis;
+        if(kniha.precteno){
+            popis = `Už jsem četl knihu "${kniha.nazev}", jejím autorem je ${kniha.autor}`
+        } else {
+            popis = `Chci si přečíst knihu "${kniha.nazev}", jejím autorem je ${kniha.autor}`
+        }
+        return popis;
+    }
+
+    for(let kniha of knihy){
+        console.log(popisKnihy2(kniha));
+    }
+
+    //Konec úlohy Replit
+
+    
 </script>
 </html>
