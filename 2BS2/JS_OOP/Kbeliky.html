@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukolrep_Kbeliky</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Kbelik {
+        constructor(zadObjem){
+            this.maxObjem = zadObjem;
+            this.objem = 0;
+        }
+
+        napln() {
+            this.objem = this.maxObjem;
+        }
+
+        vylej() {
+            this.objem = 0;
+        }
+
+        prilej(objemVody) {
+            if(objemVody > this.maxObjem - this.objem){
+                console.log('Přelil si kýbl!');
+                this.objem = this.maxObjem;
+            } else {
+                this.objem += objemVody;
+            }
+        }
+
+        prelejDo(druhyKbelik) {
+            if(druhyKbelik.objem > this.maxObjem - this.objem){
+                console.log('Přelil si kýbl!');
+                this.objem = this.maxObjem;
+            } else {
+                this.objem += druhyKbelik.objem;
+            }
+        }
+    }
+
+    let prvniKbelik = new Kbelik(7);
+    console.log(prvniKbelik.objem); //ukáže 0
+    prvniKbelik.napln();
+    console.log(prvniKbelik.objem); //ukáže 7
+    prvniKbelik.vylej();
+    console.log(prvniKbelik.objem); //ukáže 0
+    prvniKbelik.prilej(2);
+    console.log(prvniKbelik.objem); //ukáže 2
+    prvniKbelik.prilej(3);
+    console.log(prvniKbelik.objem); //ukáže 5
+    prvniKbelik.prilej(3); //vypíše varování o přetečení
+    console.log(prvniKbelik.objem); //ukáže 7
+    prvniKbelik.vylej();
+
+    let druhyKbelik = new Kbelik(4);
+    druhyKbelik.napln();
+    prvniKbelik.prelejDo(druhyKbelik);
+    console.log(prvniKbelik.objem); //ukáže 4
+
+</script>
+</html>
