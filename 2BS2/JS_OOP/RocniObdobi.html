@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_RocniObdobi</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let rocniObdobi = [];
+    let zima = {nazev: 'Zima'};
+    let jaro = {nazev: 'Jaro'};
+    let leto = {nazev: 'Léto'};
+    let podzim = {nazev: 'Podzim'};
+
+    zima.pristiObdobi = jaro;
+    jaro.pristiObdobi = leto;
+    leto.pristiObdobi = podzim;
+    podzim.pristiObdobi = zima;
+
+    rocniObdobi.push(zima, jaro, leto, podzim);
+    console.log(rocniObdobi);
+
+    function predchoziObdobi(obdobi) {
+        return obdobi.pristiObdobi.pristiObdobi.pristiObdobi;
+    }
+    console.log(predchoziObdobi(jaro).nazev);
+    console.log(predchoziObdobi(rocniObdobi[1]));
+</script>
+</html>
