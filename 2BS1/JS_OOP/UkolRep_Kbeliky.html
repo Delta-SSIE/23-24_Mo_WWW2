@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_Kbeliky</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Kbelik {
+        
+        constructor(objem){
+            maxObjem = objem;
+            aktuObjem = 0;
+        }
+
+        napln() {
+            aktuObjem = maxObjem;
+        }
+
+        vylej() {
+            aktuObjem = 0;
+        }
+
+        prijel(objemVody) {
+            if(aktuObjem + objemVody <= maxObjem){
+                aktuObjem += objemVody;
+            } else {
+                console.log("Přelil si kýbl!");
+                aktuObjem = maxObjem;
+            }
+        }
+
+        prelejDo(druhyKbelik) {
+            if(this.aktuObjem + druhyKbelik.aktuObjem <= this.maxObjem){
+                this.aktuObjem += druhyKbelik.aktuObjem;
+            } else {
+                console.log("Přelil si kýbl!");
+                aktuObjem = maxObjem;
+            }
+        }
+
+
+    }
+</script>
+</html>
