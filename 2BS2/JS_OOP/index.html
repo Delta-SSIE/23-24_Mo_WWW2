@@ -64,5 +64,123 @@
         console.log(polozka);
     }
 
+    //UkolRep - Seznam knih
+
+    let knihy = [
+        {nazev:'Bila nemoc', autor:'Karel Čapek', precteno: true},
+        {nazev:'Král Lávra', autor:'Karel H. Borovský', precteno: false},
+        {nazev:'Kytice', autor:'Karel J. Erben', precteno: true}
+    ];
+
+   function popisKnihy(kniha) {
+    let text = `${kniha.nazev}, autor ${kniha.autor}`;
+    return text;
+   }
+
+   console.log(popisKnihy(knihy[0]));
+
+   function popisKnihy2(kniha){
+    let text;
+    if(kniha.precteno){
+        text = `Už jsem četl knihu ${kniha.nazev}, jejím autorem je ${kniha.autor}.`
+    } else {
+        text = `Chci si přečíst knihu ${kniha.nazev}, jejím autorem je ${kniha.autor}.`
+    }
+    return text;
+   }
+
+   for(let a of knihy){
+    console.log(popisKnihy2(a));
+   }
+
+   //Konec úkolu z Replitu
+
+   //Ukládání do proměnné hodnotu druhé proměnné
+   let cislo1 = 5;
+   let cislo2 = cislo1;
+   cislo1 = 10;
+   console.log(cislo2);
+
+   let slovo1 = "Ahoj";
+   let slovo2 = slovo1;
+   slovo1 = "Čus";
+   console.log(slovo2);
+
+   //Ukládání do pole a objektu referenci na původní pole a objekt
+   let pole1 = [1, 2, 3];
+   let pole2 = pole1;
+   pole1[0] = 0;
+   console.log(pole2[0]);
+
+   let objekt1 = {nazev: 'A'};
+   let objekt2 = objekt1;
+   objekt1.nazev = 'B';
+   console.log(objekt2.nazev);
+
+
+   //Metody
+   let ctverecABC = {
+    hrana: 5,
+    //Metoda definovaná uvnitř deklarace objektu
+    obvod: function() {
+        console.log(this.hrana*4);
+    }
+   };
+
+   //Metoda objektu
+   ctverecABC.obsah = function() {
+    console.log(this.hrana*this.hrana);
+   }
+
+   //Výpis metody
+   ctverecABC.obsah();
+   ctverecABC.obvod();
+
+
+   //Třída
+
+   //Definice třídy
+   class Ctverec {
+    constructor() {
+        this.hrana = 0;
+    }
+
+    obvod() {
+        console.log(this.hrana*4);
+    }
+
+    obsah(){
+        console.log(this.hrana*this.hrana);
+    }
+   }
+
+   let ctverecA = new Ctverec();
+   ctverecA.hrana = 15;
+   ctverecA.obsah();
+   ctverecA.obvod();
+
+   let ctverecB = new Ctverec();
+   ctverecB.hrana = 8;
+   ctverecB.obsah();
+   ctverecB.obvod();
+
+   //Třída s konstruktorem s parametry
+   class Clovek {
+    constructor(jmeno, vek){
+        this.name = jmeno;
+        this.age = vek;
+    }
+
+    predstavSe() {
+        console.log(`Ahoj, mé jméno je ${this.name} a je mi ${this.age} let!`);
+    }
+   }
+
+   //Tvorba objektu ze třídy Clovek s argumenty
+   let lukas = new Clovek('Lukáš Jandura',85);
+   let ignac = new Clovek('Ignác Franc',25);
+   lukas.predstavSe();
+   ignac.predstavSe();
+
 </script>
 </html>
