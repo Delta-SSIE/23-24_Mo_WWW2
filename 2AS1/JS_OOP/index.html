@@ -32,5 +32,55 @@
     let polozka = 'znacka';
     auto[polozka] = 'Volvo';
     console.log(auto);
+
+    //Deklarace objektu s atributem, který je pole, či jiný objekt.
+    let osoba = {
+        jmeno: "Jakub",
+        vek: 25,
+        penezenka: ["peníze","karta","občanka"],
+        rodic: {jmeno: "Jindra", vek: 80, penezenka: ["karta pojistence", "penize"]}
+    }
+
+    //Výpis atributů - pole a objekt
+    console.log(osoba.penezenka[1]);
+    console.log(osoba.rodic.vek);
+
+    //Smazání položky
+    console.log(osoba);
+    delete osoba.rodic;
+    console.log(osoba);
+
+    //objekt jako argument funkce
+    function Ahoj(objekt){
+        console.log(`Ahoj, já jsem ${objekt.jmeno} a je mi ${objekt.vek}!`);
+    }
+    Ahoj(osoba);
+
+    //Pole objektu
+    let garaz = [
+        {znacka: 'BMW', km: 120},
+        {znacka: 'Volvo', km: 150},
+        {znacka: 'Mercedes', km: 50},
+        {znacka: 'Octavia', km: 80}
+    ]
+
+    console.log(garaz[0].znacka);
+    console.log(garaz[1].km);
+
+    for(let objekt of garaz){
+        console.log(`Auto je značky ${objekt.znacka} a má najeto ${objekt.km}`);
+    }
+
+    //Procházení položek objektu
+
+    for(let key in osoba){
+        //Vypisuje název položky
+        console.log(key);
+        //Vypisuje hodnotu položky
+        console.log(osoba[key]);
+    }
+
+
+
 </script>
 </html>
