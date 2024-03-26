@@ -93,6 +93,116 @@
 
     //Konec úlohy Replit
 
-    
+    //Cyklus na procházení položek
+    for (let key in moje_auto) {
+        //Vypíše název položky
+        console.log(key);
+        //Vypíše hodnotu položky key
+        console.log(moje_auto[key]);
+    }
+
+    //Vnořený objekt
+    let soused_auto = {
+        kufr: {lekarnicka: false, rezerva: true, zavazadlo: {nazev: "Kufr do práce", vaha: 12}}
+    }
+
+    //Výpis vnořených objektů
+    console.log(soused_auto.kufr.lekarnicka);
+    console.log(soused_auto.kufr.zavazadlo.nazev);
+
+    //Rozdíl ukládání do paměti a reference
+
+    //Čísla, bool, řetezce se napevno ukládají do paměti
+    let prvniPromenna = 3;
+    let druhaPromenna = prvniPromenna;
+    prvniPromenna = 4;
+    console.log(druhaPromenna); 
+
+    //Objekty a pole se ukládají jako reference
+    let prvniPromenna1 = { jmeno: "Jan", vek: 13 };
+    let druhaPromenna1 = prvniPromenna1;
+    prvniPromenna1.jmeno = "Karel";
+    console.log(druhaPromenna1.jmeno);
+
+    let prvniPromenna2 = ["červená", "modrá", "žlutá"];
+    let druhaPromenna2 = prvniPromenna2;
+    prvniPromenna2[2] = "zelená";
+    console.log(druhaPromenna2[2]);
+
+    //Metody objektů
+    let osoba = {
+        jmeno: "Richard",
+        vek: 15,
+        //Metoda uvnitř deklarace objektu
+        jeZletily: function() {
+            if(this.vek >= 18) {
+                console.log('Je zletilý!');
+            } else {
+                console.log('Není zletilý!');
+            }
+        }
+    };
+
+    //Metoda k objektu osoba
+    osoba.predstavSe = function () {
+        console.log(`Ahoj, mé jméno je ${osoba.jmeno}`);
+    }
+
+    osoba.predstavSe();
+    osoba.jeZletily();
+
+    //tvorba třídy
+
+    class Ctverec {
+        constructor() {
+            this.hrana = 0;
+        }
+
+        obsah() {
+            console.log(this.hrana*this.hrana);
+        }
+    }
+
+    //Nový objekt ze třídy Ctverec
+
+    let ctverecA = new Ctverec();
+    ctverecA.hrana = 5;
+    ctverecA.obsah();
+    let ctverecB = new Ctverec();
+    ctverecB.hrana = 25;
+    ctverecB.obsah();
+
+    //Třída s konstruktorem s parametry
+
+    class Osoba {
+        constructor(jmeno, vek){
+            this.name = jmeno;
+            this.age = vek;
+        }
+
+        jeZletily() {
+            if(this.age >= 18) {
+                console.log('Je zletilý!');
+            } else {
+                console.log('Není zletilý!');
+            }
+        }
+
+        predstavSe() {
+        console.log(`Ahoj, mé jméno je ${this.name}`);
+    }
+
+    }
+
+    let jan = new Osoba("Jan Kotel", 14);
+    let libor = new Osoba("Libor Gombár", 28);
+
+    libor.jeZletily();
+    libor.predstavSe();
+    jan.predstavSe();
+    jan.jeZletily();
+
+
+
 </script>
 </html>
