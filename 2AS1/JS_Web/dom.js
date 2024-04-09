@@ -28,7 +28,12 @@ h.style = "background-color: red"
 
 
 let img = document.getElementById('jabko');
-let zmena = window.confirm("Chceš vidět opravdové jablko?");
-if(zmena){
-    img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/%D0%90pple_.png/220px-%D0%90pple_.png";
-}
+img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/%D0%90pple_.png/220px-%D0%90pple_.png";
+
+//Změna stylu
+let teloStranky = document.getElementById('telo');
+teloStranky.style.color = "white";
+teloStranky.style.backgroundColor = "black";
+
+//Připisování do HTML
+teloStranky.innerHTML += "<p>Tajný dovětek</p>";
