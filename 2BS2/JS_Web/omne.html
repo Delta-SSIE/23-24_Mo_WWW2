@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8"/>
+    <title>O mně</title>
+  </head>
+  <body>
+    <h1>O mně</h1>
+    
+    <ul>
+      <li>Přezdívka: <span id="nickname"></span></li>
+      <li>Záliby:  <span id="favorites"></span></li>
+      <li>Odkud jsem: <span id="hometown"></span></li>
+    </ul>
+  </body>
+  <script>
+    let telo = document.body;
+    telo.style.fontFamily = "Arial, sans-serif"
+
+    let spany = document.querySelectorAll('ul li span');
+    console.log(spany);
+    spany[0].innerHTML = " Přezdívka";
+    spany[1].innerHTML = " Weby";
+    spany[2].innerHTML = " Pardubice";
+
+    let items = document.getElementsByTagName('li');
+    console.log(items);
+    for(i = 0; i < items.length; i++){
+        items[i].className = "list-item";
+    }
+
+    //Rodičovský prvek
+    let hlava = document.head;
+    //Nový prvek HTML style
+    let styl = document.createElement('style');
+    styl.innerHTML = ".list-item {color: red;}";
+    //Přidání nového prvku jako prvku podřazeného rodičovského prvku.
+    hlava.appendChild(styl);
+
+    //Rodičovský prvek
+    let body = document.body;
+    //Nový prvek HTML img
+    let obrazek = document.createElement('img');
+    obrazek.src = "https://d197nivf0nbma8.cloudfront.net/uploads/2014/09/Guy-David-expert-2021-scaled.jpeg"
+    obrazek.height = 200;
+    obrazek.width = 100;
+    //Přidání prvku jako prvek podřadný prvku nadřazenému (rodičovi)
+    body.appendChild(obrazek);
+
+  </script>
+</html>
