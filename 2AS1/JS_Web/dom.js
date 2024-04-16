@@ -37,3 +37,29 @@ teloStranky.style.backgroundColor = "black";
 
 //Připisování do HTML
 teloStranky.innerHTML += "<p>Tajný dovětek</p>";
+
+//Připisování prvků na stránku pomocí innerHTML
+let seznam = document.getElementById('list');
+seznam.innerHTML = "<li> 1.položka </li>";
+seznam.innerHTML += "<li> 2.položka </li>";
+for(i = 3; i < 13;i++){
+    seznam.innerHTML += `<li> ${i}.položka </li>`; 
+}
+
+//Tvorba nových elementů a jejich přidávání na rodičovské prvky
+
+//Rodičovský prvek div
+let obalka = document.getElementById('obalka');
+
+//Tvorba prvku img
+let newImg = document.createElement('img');
+newImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4UeEjjERyEVTOIaXIKHlj7snPZAKulH5-z1Kau1lsw&s";
+//vložení prvku na rodičovský prvek
+obalka.appendChild(newImg);
+
+//Tvorba prvku p
+let newPar = document.createElement('p');
+//Node pro tvorbu textu
+let text = document.createTextNode('Tohle je obrázek!');
+newPar.appendChild(text);
+obalka.appendChild(newPar);
