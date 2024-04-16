@@ -28,3 +28,25 @@ obrazek.src = "https://d15-a.sdn.cz/d_15/c_img_F_E/6blBqh3.jpeg?fl=cro,0,0,798,4
 let teloStranky = document.body;
 teloStranky.style.color = "white";
 teloStranky.style.backgroundColor = "Brown";
+
+//Přidání odstavců (a jiný html tagů) pomocí innerHTML
+let box = document.getElementById('box');
+box.innerHTML = "<p>1. odstavec</p>";
+//přidání prvku pomocí innerHTML
+box.innerHTML += "<p>2. odstavec</p>";
+for(i = 3; i < 13; i++){
+    box.innerHTML += `<p>${i}. odstavec</p>`;
+}
+
+//Práce s rodičovskými prvky a jejich podřadnými prvky
+let obalka = document.getElementById('obalka');
+let newImg = document.createElement('img');
+newImg.width = 450;
+newImg.height = 250;
+newImg.src = "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg";
+obalka.appendChild(newImg);
+
+let text = document.createTextNode('Ahoj, jak se máš?');
+let par = document.createElement('p');
+par.appendChild(text);
+obalka.appendChild(par);
