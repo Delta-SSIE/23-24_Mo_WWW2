@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_knizky</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const books = [
+  {
+    title: 'The Design of EveryDay Things',
+    author: 'Don Norman',
+    alreadyRead: false
+  }, {
+    title: 'The Most Human Human',
+    author: 'Brian Christian',
+    alreadyRead: true
+  }
+];
+
+let body = document.body;
+body.innerHTML = "<h1>Seznam Knih</h1>";
+
+let ulList = document.createElement('ul');
+body.appendChild(ulList);
+
+for(i = 0; i < books.length; i++){
+    let li = document.createElement('li');
+    li.innerHTML = `${books[i].title} napsal ${books[i].author}`;
+    if(books[i].alreadyRead) {
+        li.style.color = "green";
+        li.style.fontWeight = "bold";
+    }
+    ulList.appendChild(li);
+}
+</script>
+</html>
