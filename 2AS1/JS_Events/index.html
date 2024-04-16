@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Event</title>
+</head>
+<body>
+    <button onclick="Ahoj()">Klikni na mě!</button>
+    <div id="pozdrav"></div>
+    <button onclick="Cas()">Chceš znát aktuální čas?</button>
+</body>
+<script>
+        let misto = document.getElementById('pozdrav');
+    function Ahoj(){
+        misto.innerHTML += "<h1>Ahoooj!</h1>";
+    }
+    function Cas(){
+        misto.innerHTML = Date();
+    }
+</script>
+</html>
