@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Events</title>
+</head>
+<body>
+    <button onclick="Ahoj()">Ahoj</button>
+    <button onclick="Smaz()">Erase</button>
+
+    <input id="text" type="text" value="Ahoj">
+    <button onclick="Submit()">Submit</button>
+    <ul id="textArea">
+    </ul>
+</body>
+<script>
+    let telo = document.body;
+    function Ahoj() {
+        telo.innerHTML += "<h1>Ahoj!</h1>";
+    }
+    function Smaz() {
+        telo.innerHTML = "";
+    }
+    function Submit(){
+        let text = document.getElementById('text');
+        let ulList = document.getElementById('textArea');
+       
+        let novyPrvek = document.createElement('li');
+        novyPrvek.innerHTML = text.value;
+        ulList.appendChild(novyPrvek);
+    }
+</script>
+</html>
