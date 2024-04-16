@@ -32,3 +32,29 @@ telo.style.backgroundColor = "yellow";
 //innerHTML
 selektor1.innerHTML = "Tohle je nový text odstavce!";
 selektor1.innerHTML += " Tohle se připíše k odstavci!";
+
+//Přidávání prvků na stránku pomocí innerHTML
+let box = document.getElementById('box');
+box.innerHTML = "<p> 1. Odstavec </p>";
+//přidávání hodnot pomocí innerHTML
+box.innerHTML += "<p> 2. Odstavec </p>";
+
+for(i = 3; i < 14; i++){
+    box.innerHTML += `<p> ${i}. Odstavec </p>`;
+}
+
+//Vytváření nových prvků pomocí navěšování prvků na prvky rodičovské
+let obalka = document.getElementById('obalka');
+//vytvořený nový objekt
+let div = document.createElement('div');
+//připadané atributy k divu
+div.style.width = '100px';
+div.style.height = '100px';
+div.style.border = '1px solid black';
+//navěšení nového objektu na obalku
+obalka.appendChild(div);
+
+let text = document.createTextNode('Ahooooj');
+let par = document.createElement('p');
+par.appendChild(text);
+obalka.appendChild(par);
