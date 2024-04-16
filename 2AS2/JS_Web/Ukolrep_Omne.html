@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukolrep_Omne</title>
+</head>
+<body>
+    <h1>O mně</h1>
+      
+    <ul>
+      <li>Přezdívka: <span id="nickname"></span></li>
+      <li>Záliby:  <span id="favorites"></span></li>
+      <li>Odkud jsem: <span id="hometown"></span></li>
+    </ul>
+</body>
+<script>
+    let telo = document.body;
+    telo.style.fontFamily = "Arial, sans-serif";
+
+    let informace = document.querySelectorAll('ul li span');
+    console.log(informace);
+    informace[0].innerHTML = " Prezdivka";
+    informace[1].innerHTML = " Weby";
+    informace[2].innerHTML = " Pardubice";
+
+    let items = document.getElementsByTagName('li');
+    console.log(items);
+    for(i=0;i<items.length;i++){
+        items[i].className = "list-item";
+    }
+
+    //Rodičovský prvek
+    let hlava = document.head;
+    //Vytvoření nového prvku
+    let styl = document.createElement('style');
+    styl.innerHTML = ".list-item {color: red}";
+    //Vložení prvku ke svému rodičovskému
+    hlava.appendChild(styl);
+
+    //vytvoření nového prvku
+    let obrazek = document.createElement('img');
+    obrazek.src = "https://d197nivf0nbma8.cloudfront.net/uploads/2014/09/Guy-David-expert-2021-scaled.jpeg";
+    obrazek.height = 250;
+    obrazek.width = 125;
+    //vložení prvku ke svému rodičovskému elementu
+    telo.appendChild(obrazek);
+
+</script>
+</html>
