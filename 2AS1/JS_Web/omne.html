@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8"/>
+    <title>O mně</title>
+  </head>
+  <body>
+    <h1>O mně</h1>
+    
+    <ul>
+      <li>Přezdívka: <span id="nickname"></span></li>
+      <li>Záliby:  <span id="favorites"></span></li>
+      <li>Odkud jsem: <span id="hometown"></span></li>
+    </ul>
+  </body>
+  <script>
+    let body = document.body;
+    body.style.fontFamily = "Arial, sans-serif";
+
+    let polozky = document.querySelectorAll('ul li span');
+    polozky[0].innerHTML = "Přezdívka";
+    polozky[1].innerHTML = "Web";
+    polozky[2].innerHTML = "Pardubice";
+
+    let li = document.getElementsByTagName('li');
+    for(i = 0; i < li.length; i++){
+        li[i].className = "list-item";
+    }
+
+    //Vytvořím nový prvek HTML tagu
+    let styl = document.createElement('style');
+    //Přidání html textu do tagu
+    styl.innerHTML = ".list-item {color: red}";
+    //Vyberu hlavičku
+    let hlavicka = document.head;
+    //hlavička jako nadřazený prvek pod sebe vloží nový element v proměnné styl
+    hlavicka.appendChild(styl);
+
+    //Vytvořím element img
+    let obrazek = document.createElement('img');
+    obrazek.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUIpRr-t46SGmfnuhWoLeagYxvyZ_jyifsRWqZetKaZw&s";
+    body.appendChild(obrazek);
+
+
+  </script>
+</html>
