@@ -11,8 +11,14 @@
     <div id="box"></div>
     <h1 id="head1" onmouseover="kuzorNa()" onmousedown="kuzorDrz()" onmouseup="kurzorUp()">NADPIS</h1>
 
+
+    <h1 id="nad">Nadpis 1</h1>
+    
+    <ul id="seznam"></ul>
 </body>
 <script>
+
+    //JS funkce volané z triggeru HTML
     let box = document.getElementById('box');
     let text = document.getElementById('text');
     let h = document.getElementById('head1');
@@ -38,5 +44,43 @@
     function Napis() {
         box.innerHTML += "Ahoj! "
     }
+    //---------------
+
+    //EventListeners
+    let nadpis = document.getElementById('nad');
+
+    nadpis.addEventListener("click",zmenBarvu);
+    nadpis.addEventListener("mouseover",zmenPozadi);
+    nadpis.addEventListener("mouseleave",zmenPozadi2);
+
+    function zmenBarvu() {
+        if(nadpis.style.color != "red")
+        {
+            nadpis.style.color = "red";
+        } else {
+            nadpis.style.color = "black";
+        }
+        
+    }
+
+    function zmenPozadi2() {
+        nadpis.style.backgroundColor = "white";
+    }
+
+    function zmenPozadi() {
+        nadpis.style.backgroundColor = "blue";
+    }
+
+    //Předávání paramterů
+    let list = document.getElementById('seznam');
+
+    for(let i = 0; i < 10; i++) {
+        let cislo = document.createElement('li');
+        cislo.innerHTML = i;
+        cislo.addEventListener("click", function() {this.style.color = "blue"});
+        list.appendChild(cislo);
+    }
+
+
 </script>
 </html>
