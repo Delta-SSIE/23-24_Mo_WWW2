@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_ColorBox</title>
+    <style>
+        #box {
+  height: 100px;
+  width: 100px;
+  background-color: #000000;
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="color">Choose color:</label> 
+        <input type="color" name="color" id="color"></div>
+    
+        <div id="box"></div>
+    </body>
+    <script>
+        let color = document.getElementById('color');
+        let box = document.getElementById('box')
+
+        color.addEventListener("change",zmenBarvu)
+
+        function zmenBarvu() {
+            console.log(color.value);
+            box.style.backgroundColor = color.value;
+        }
+        
+    </script>
+</html>
