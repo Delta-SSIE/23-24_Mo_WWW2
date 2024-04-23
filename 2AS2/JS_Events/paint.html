@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="color">Choose color:</label> 
+        <input type="color" name="color" id="color" >  
+        </div>
+    
+        <table id="paintRaster"></table>
+</body>
+<script>
+    let table = document.getElementById('paintRaster');
+    let color = document.getElementById('color')
+    
+    table.style.borderSpacing = "0px";
+    for(let i = 0; i < 30; i++) {
+        let newRow = document.createElement('tr')
+        for(let j = 0; j < 30; j++)
+        {
+            let newCell = document.createElement('td');
+            newCell.style.height = "10px";
+            newCell.style.width = "10px";
+            newCell.style.border = "1px solid black";
+            newCell.addEventListener("click", function() {this.bgColor = color.value});
+            newRow.append(newCell);
+        }
+        table.append(newRow);
+    }
+</script>
+</html>
