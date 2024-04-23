@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Events</title>
+</head>
+<body>
+    <button onclick="Hello()">Click!</button>
+    <div id="hello"></div>
+    <input type="text" oninput="Obarvi()" onchange="Obarvi2()">¨
+    <h1 id="nadpis" onmouseover="Prepis()" onmousedown="Prepis2()" onmouseup="Prepis3()">Ahoj!</h1>
+
+    <h1 id="nadpis2">Nadpis</h1>
+</body>
+<script>
+    // funkce, které se spouští na základu jejich volání v HTML
+    let h = document.getElementById('nadpis');
+    let div = document.getElementById('hello');
+
+    function Prepis() {
+        h.innerHTML = "Hello!";
+    }
+
+    function Prepis2() {
+        h.innerHTML = "Aloha!";
+    }
+
+    function Prepis3() {
+        h.innerHTML = "Ahoj!";
+    }
+
+
+    function Hello() {
+        div.innerHTML += "Hello";
+    }
+
+    function Obarvi() {
+        div.innerHTML += "Barva";
+    }
+
+    function Obarvi2() {
+        div.innerHTML += "BARVA";
+    }
+    //----------------------
+    //EventListener
+
+    let h2 = document.getElementById('nadpis2');
+    h2.addEventListener("click",Nadpis,false);
+
+    function Nadpis(){
+        if(h2.innerHTML == "Nadpis"){
+            h2.innerHTML = "Nadpis 2";
+        } else {
+            h2.innerHTML = "Nadpis";
+        }
+        
+    }
+</script>
+</html>
