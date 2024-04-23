@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+}
+.solved {
+  color: gray;
+  text-decoration: line-through;
+}
+.input {
+  display: flex;
+}
+#memoText {
+  flex: 1 1 90%;
+}
+#storeBtn {
+  flex: 0 0 auto;
+}
+
+div.memo {
+  background-color: lightyellow;
+  padding: 1ex;
+  margin: 1ex;
+  border: 1px solid #c0c0c0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input id="memoText" placeholder="Insert memo text" type="text">
+        <button id="storeBtn">OK</button>
+        <button id="deleteAll" type="reset">Reset</button>
+        </div>
+    
+        <div id="memoArea"></div>
+</body>
+<script>
+    let area = document.getElementById('memoArea');
+    let ok = document.getElementById('storeBtn');
+    let text = document.getElementById('memoText');
+    let reset = document.getElementById('deleteAll');
+
+    area.style.display = "flex";
+    area.style.flexDirection = "row-reverse";
+
+    reset.addEventListener("click",smazListky);
+    ok.addEventListener("click",pridaniListku);
+    text.addEventListener("keypress",function(event) {if(event.key === "Enter") {pridaniListku()}})
+
+    function pridaniListku() {
+        let listek = document.createElement('div');
+        listek.className = "memo";
+        listek.innerHTML = text.value;
+        listek.addEventListener("click",function(){this.remove()});
+        //Pokud je inputové okno prázdné, tak se listek nepřidá do divu memoArea
+        if(text.value != ""){
+            area.appendChild(listek);
+            text.value = null;
+            text.focus();
+        }
+    }
+
+    function smazListky() {
+        area.innerHTML = null;
+    }
+
+</script>
+</html>
