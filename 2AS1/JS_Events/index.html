@@ -9,14 +9,82 @@
     <button onclick="Ahoj()">Klikni na mě!</button>
     <div id="pozdrav"></div>
     <button onclick="Cas()">Chceš znát aktuální čas?</button>
+    <input type="text" id="vstup" oninput="Napis()" onchange="Napis2()">
+    <div id="area"></div>
+    <h1 id="nadpis" onmouseover="MysPres()" onmousedown="MysDrzi()" onmouseup="MysPusti()">AHOJ</h1>
+
+    <h1 id="head1">Nadpis 1</h1>
+    <p id="p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nesciunt iusto ipsam aperiam voluptates! Eius, cumque id corrupti nam praesentium, neque enim debitis, in non voluptatibus nulla numquam delectus vero?</p>
 </body>
 <script>
-        let misto = document.getElementById('pozdrav');
+    //Funkce spueštěná z HTML elementu
+    let misto = document.getElementById('pozdrav');
+    let area = document.getElementById('area');
+    let text = document.getElementById('vstup');
+    let nadpis = document.getElementById('nadpis');
+
+    function MysPres() {
+        nadpis.innerHTML = "Teď jsi najel myší na nadpis!";
+    }
+    function MysDrzi() {
+        nadpis.innerHTML = "Teď držíš levé tlačítko myši!";
+    }
+    function MysPusti() {
+        nadpis.innerHTML = "Ahoj";
+    }
+
+    function Napis(){
+        area.innerHTML += "A";
+    }
+
+    function Napis2() {
+        area.innerHTML += " Dokončeno!";
+    }
+    
     function Ahoj(){
         misto.innerHTML += "<h1>Ahoooj!</h1>";
     }
     function Cas(){
         misto.innerHTML = Date();
     }
+    //------------------
+
+    //EventListener
+
+    let h = document.getElementById('head1');
+    h.addEventListener("click",zmenBarvu);
+    h.addEventListener("mouseover",zmenText);
+    h.addEventListener("mouseleave",zmenText2);
+
+    function zmenBarvu(){
+        if (h.style.color == "red"){
+            h.style.color = "black";
+        } else {
+            h.style.color = "red";
+        }
+        
+    }
+
+    function zmenText() {
+        h.innerHTML = "Nadpis 2";
+    }
+
+    function zmenText2() {
+        h.innerHTML = "Nadpis 1";
+    }
+
+    //EventListener na window
+
+    window.addEventListener("resize",zmenVelikost);
+    function zmenVelikost() {
+        h.style.fontSize = "150px"
+    }
+
+    //Předání hodnot a EventListener
+
+    let p = document.getElementById('p');
+    p.addEventListener("click",function() {this.style.color = "red"});
+    
+
 </script>
 </html>
