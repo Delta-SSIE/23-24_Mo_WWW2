@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_paint</title>
+</head>
+<body>
+    <div>
+        <label for="color">Choose color:</label> 
+        <input type="color" name="color" id="color" >  
+        </div>
+    
+     
+       <table id="paintRaster"></table>
+</body>
+<script>
+    let tabulka = document.getElementById('paintRaster');
+    let color = document.getElementById('color');
+
+    tabulka.style.borderSpacing = "0px";
+    for(let i = 0; i < 10; i++){
+        let newRow = document.createElement('tr');
+        for(let j = 0; j < 10; j++){
+            let newCell = document.createElement('td');
+            newCell.style.height = "10px";
+            newCell.style.width = "10px";
+            newCell.style.border = "1px solid black";
+            newCell.addEventListener("click",function() {this.bgColor = color.value});
+            newRow.appendChild(newCell);
+        }
+        tabulka.appendChild(newRow);
+    }
+</script>
+</html>
