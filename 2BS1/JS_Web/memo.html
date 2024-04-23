@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkolRep_Memo</title>
+    <style>
+        body {
+  font-family: "Calibri", "Arial", "Helvetica", sans-serif;
+}
+.solved {
+  color: gray;
+  text-decoration: line-through;
+}
+.input {
+  display: flex;
+}
+#memoText {
+  flex: 1 1 90%;
+}
+#storeBtn {
+  flex: 0 0 auto;
+}
+
+div.memo {
+  background-color: lightyellow;
+  padding: 1ex;
+  margin: 1ex;
+  border: 1px solid #c0c0c0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input id="memoText" placeholder="Insert memo text" type="text">
+        <button id="storeBtn">OK</button>
+        <button id="deleteAll" type="reset">Reset</button>
+        </div>
+    
+        <div id="memoArea"></div>
+    
+</body>
+<script>
+
+    let oblast = document.getElementById('memoArea');
+    let ok = document.getElementById('storeBtn');
+    let text = document.getElementById('memoText');
+    let reset = document.getElementById('deleteAll');
+
+    ok.addEventListener("click",pridaniStickeru);
+    reset.addEventListener("click",smazListky);
+    text.addEventListener("keypress",(event) => {if (event.key === "Enter") {pridaniStickeru()}});
+
+    function pridaniStickeru() {
+        let div = document.createElement('div');
+        div.className = 'memo';
+        div.innerHTML = text.value;
+        div.addEventListener("click",() => div.remove());
+        if(text.value != "") {
+            text.value = "";
+            text.focus();
+            oblast.appendChild(div);
+        }
+        
+    }
+
+    function smazListky() {
+        /*
+        let listMemo = document.getElementsByClassName('memo');
+        console.log(listMemo);
+        let delka = listMemo.length;
+        for(i = 0; i < delka; i++) {
+            listMemo[i].remove();
+        }
+        */
+        oblast.innerHTML = null;
+    }
+</script>
+</html>
