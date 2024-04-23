@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Events</title>
+</head>
+<body>
+    <button onclick="Napis()">Klikni!</button>
+    <input type="text" id="text" oninput="Pismeno()" onchange="Slovo()">
+    <div id="box"></div>
+    <h1 id="head1" onmouseover="kuzorNa()" onmousedown="kuzorDrz()" onmouseup="kurzorUp()">NADPIS</h1>
+
+</body>
+<script>
+    let box = document.getElementById('box');
+    let text = document.getElementById('text');
+    let h = document.getElementById('head1');
+
+    function kuzorNa() {
+        h.innerHTML = "Teď je kurzor na nadpisu!";
+    }
+
+    function kuzorDrz() {
+        h.innerHTML = "Teď myš drží nadpis!";
+    }
+
+    function kurzorUp() {
+        h.innerHTML = "Nadpis";
+    }
+
+    function Pismeno() {
+        box.innerHTML += "A";
+    }
+    function Slovo() {
+        box.innerHTML += " Dokončeno!";
+    }
+    function Napis() {
+        box.innerHTML += "Ahoj! "
+    }
+</script>
+</html>
