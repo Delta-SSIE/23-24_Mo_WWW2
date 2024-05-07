@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS_Classlist</title>
     <style>
-                .class1 {
+        .class1 {
             color: red;
             font-size: 24px;
         }
@@ -15,15 +15,37 @@
         }
         .class3 {
             border: 2px solid green;
+            color: blue;
             border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Nadpis</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <h1 class="class1 class2" id="nad">Nadpis</h1>
+    <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <button id="del">Odeber třídu</button>
 </body>
 <script>
+    let nad = document.getElementById("nad");
+    let but = document.getElementById("del");
+    let par = document.getElementById("par");
 
+    //Výpis všech tříd daného HTML prvku
+    console.log(nad.classList);
+    //Výpis první třídy daného HTML prvku
+    console.log(nad.classList[0]);
+
+    nad.addEventListener("click",function(){
+        this.classList.add("class3")
+    })
+
+    but.addEventListener("click", function() {
+        // nad.classList.remove("class3");
+        nad.classList.remove(nad.classList[0]);
+    })
+
+    par.addEventListener("click", function() {
+        this.classList.toggle("class1");
+    })
 </script>
 </html>
