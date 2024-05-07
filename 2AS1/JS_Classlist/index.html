@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Classlist</title>
+    <style>
+       .class1 {
+            color: red;
+            font-size: 24px;
+        }
+        .class2 {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .class3 {
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nadpis</h1>
+    <p class="class1" id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <button id="odeber">Odeber class1</button>
+    <button id="c2">Class2</button>
+</body>
+<script>
+    let p = document.getElementById("par");
+    p.classList.add("class3");
+    console.log(p.classList);
+
+    let tlacitko = document.getElementById("odeber");
+    tlacitko.addEventListener("click",odeber)
+
+    let tlacitko2 = document.getElementById("c2");
+    tlacitko2.addEventListener("click",toggle)
+
+    function odeber()
+    {
+        p.classList.remove("class1");
+    }
+
+    function toggle()
+    {
+        p.classList.toggle("class2");
+    }
+</script>
+</html>
