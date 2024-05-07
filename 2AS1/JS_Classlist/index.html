@@ -22,10 +22,14 @@
 <body>
     <h1>Nadpis</h1>
     <p class="class1" id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <button id="pridejclass1">Přidej class1</button>
     <button id="odeber">Odeber class1</button>
     <button id="c2">Class2</button>
 </body>
 <script>
+    let but = document.getElementById("pridejclass1");
+    but.addEventListener("click", function() {p.classList.add("class1")});
+
     let p = document.getElementById("par");
     p.classList.add("class3");
     console.log(p.classList);
