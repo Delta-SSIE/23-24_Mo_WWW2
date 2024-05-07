@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_API</title>
+</head>
+<body>
+    <div id="imageArea"></div>
+</body>
+<script>
+let oblast = document.getElementById("imageArea");
+
+//Syntaxe přes async funkci
+async function getImg() {
+    let response = await fetch("https://dog.ceo/api/breeds/image/random");
+    let pes = await response.json();
+    console.log(pes);
+    let img = document.createElement('img');
+    img.src = pes.message;
+    oblast.append(img);
+}
+getImg();
+
+//Syntaxe složitější
+fetch("https://dog.ceo/api/breeds/image/random").then(
+    function(response){
+        return response.json();
+    }
+).then(
+    function(dog){
+    let img2 = document.createElement('img');
+    img2.src = dog.message;
+    oblast.append(img2);
+    }
+)
+
+</script>
+</html>
