@@ -71,7 +71,7 @@
   
 </body>
 <script>
-    let zalozky = document.getElementById("zalozky");
+    let karty = document.querySelectorAll('#karty div');
     let list = document.querySelectorAll('ul li');
     let tlac1 = document.getElementById("tab-1-handle");
     let tlac2 = document.getElementById("tab-2-handle");
@@ -79,6 +79,26 @@
     let tab1 = document.getElementById("tab-1");
     let tab2 = document.getElementById("tab-2");
     let tab3 = document.getElementById("tab-3");
+
+    console.log(karty);
+    for(let i = 0; i< list.length; i++)
+    {
+        list[i].addEventListener("click", function() {
+            if(!list[i].classList.contains("aktivni"))
+            {
+                for(tab of list){
+                    tab.classList.remove("aktivni");
+                }
+                for(karta of karty){
+                    karta.classList.remove("aktivni");
+                }
+                this.classList.add("aktivni");
+                let nazevTabu = "tab-"+(i+1);
+                let novyTab = document.getElementById(nazevTabu);
+                novyTab.classList.add("aktivni");
+            }
+        })
+    }
 
 </script>
 </html>
