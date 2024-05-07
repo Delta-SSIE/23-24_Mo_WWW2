@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_API</title>
+</head>
+<body>
+    <div id="imageArea"></div>
+</body>
+<script>
+    let oblast = document.getElementById("imageArea");
+
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then(function(response){
+        return response.json();})
+        .then(function(dog){
+            let img = document.createElement('img');
+            img.src = dog.message
+            oblast.append(img);
+        });
+    
+
+</script>
+</html>
