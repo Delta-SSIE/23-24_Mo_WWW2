@@ -20,10 +20,19 @@
     </style>
 </head>
 <body>
-    <h1>Nadpis</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <h1  class="class1 class2" id="nad">Nadpis</h1>
+    <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <button id="del">Odeber třídu</button>
 </body>
 <script>
+    let nad = document.getElementById("nad");
+    let but = document.getElementById("del");
+    let p = document.getElementById("par");
 
+    but.addEventListener("click",function(){nad.classList.remove(nad.classList[0])});
+    nad.addEventListener("click",function(){nad.classList.add("class3")});
+    p.addEventListener("click",function(){p.classList.toggle("class1")});
+
+    console.log(nad.classList);
 </script>
 </html>
