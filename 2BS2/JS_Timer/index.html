@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Timer</title>
+</head>
+<body>
+    <button id="hello">Hello</button>
+    <button id="stopTo">Stop It!</button>
+    <p id="par"></p>
+    <button id="startCount">Start</button>
+</body>
+<script>
+    let btnHello = document.getElementById('hello');
+    let btnStopTo = document.getElementById('stopTo');
+    let par = document.getElementById('par');
+    let startCount = document.getElementById('startCount');
+    let stopky;
+    let timeout;
+
+    startCount.addEventListener("click", function() {
+        stopky = setInterval(function() {
+            par.innerHTML = Date();
+        },1000);
+    });
+
+    par.addEventListener("click", function() {
+        clearInterval(stopky);
+    })
+
+    btnHello.addEventListener("click", function() {
+        timeout = setTimeout(function(){
+            alert("Hello");
+        },3000)
+    })
+
+    btnStopTo.addEventListener("click", function() {
+        clearTimeout(timeout);
+    })
+</script>
+</html>
