@@ -20,10 +20,24 @@
     </style>
 </head>
 <body>
-    <h1>Nadpis</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <h1 class="class1" id="h1">Nadpis</h1>
+    <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime pariatur labore odit nam, veniam illum molestiae et, distinctio expedita, iure accusamus porro cumque nemo iusto eum. Dignissimos, exercitationem quisquam!</p>
+    <button id="butt">Toggle class3</button>
+    <input type="text" id="txt">
 </body>
 <script>
+    let nad = document.getElementById('h1');
+    let but = document.getElementById('butt');
+    let par = document.getElementById('par');
+    let txt = document.getElementById('txt');
 
+    console.log(nad.classList);
+
+    nad.addEventListener("click",function() {this.classList.add('class2')});
+    nad.addEventListener("mouseleave",function() {this.classList.remove('class2')});
+
+    but.addEventListener("click",function() {nad.classList.toggle('class3')});
+
+    par.addEventListener("click",function(){par.classList.toggle(txt.value)});
 </script>
 </html>
