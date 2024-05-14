@@ -16,6 +16,10 @@
     </div>
 </body>
 <script>
+
+let time;
+let casovac;
+
 let tim = document.getElementById('time');
 let but = document.getElementById('hell');
 let but2 = document.getElementById('stop');
@@ -24,7 +28,7 @@ let stopBtn = document.getElementById('stop2');
 let casTxt = document.getElementById('cas');
 
 but.addEventListener("click", function() {
-    let time = setTimeout(hello,3000)
+    time = setTimeout(hello,3000)
 });
 
 but2.addEventListener("click", function() {
@@ -36,14 +40,14 @@ function hello() {
 }
 
 startBtn.addEventListener("click", function() {
-    let casovac = setInterval(cas,1000);
+    casovac = setInterval(cas,1000);
 })
 
 function cas() {
     casTxt.innerHTML = Date();
 }
 
-stopBtn.addEventListener("click", function(casovac) {
+stopBtn.addEventListener("click", function() {
     clearInterval(casovac);
 })
 
