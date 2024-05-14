@@ -11,6 +11,7 @@
 <script>
     let area = document.getElementById('photoArea');
 
+    //Async funkce pro fetch API
     async function dogPhoto() {
         let reponse = await fetch('https://dog.ceo/api/breeds/image/random')
         let dogImg = await reponse.json();
@@ -20,5 +21,18 @@
     }
 
     dogPhoto();
+
+    //Then syntaxe pro fetch API
+
+    fetch('https://dog.ceo/api/breed/akita/images/random').then(
+        function(response){ return response.json()}
+    ).then(
+        function(dog){
+        let img2 = document.createElement('img');
+        img2.src = dog.message;
+        area.append(img2); 
+        }
+    )
+
 </script>
 </html>
