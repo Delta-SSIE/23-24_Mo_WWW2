@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="nad1">Nadpis 1</h1>
+    <p class="schovejSe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consequuntur adipisci? Voluptatibus asperiores nobis, architecto corrupti iste consequatur ullam reiciendis, nihil voluptate minus earum? Cum asperiores nobis at corrupti necessitatibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consequuntur adipisci? Voluptatibus asperiores nobis, architecto corrupti iste consequatur ullam reiciendis, nihil voluptate minus earum? Cum asperiores nobis at corrupti necessitatibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consequuntur adipisci? Voluptatibus asperiores nobis, architecto corrupti iste consequatur ullam reiciendis, nihil voluptate minus earum? Cum asperiores nobis at corrupti necessitatibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consequuntur adipisci? Voluptatibus asperiores nobis, architecto corrupti iste consequatur ullam reiciendis, nihil voluptate minus earum? Cum asperiores nobis at corrupti necessitatibus?</p>
+    <div id="text"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#nad1").click(function(){
+        $(".schovejSe").hide();
+    })
+
+    $("#nad1").click(function() {
+        $("p").text("Klik");
+    })
+
+    $("p").click(function() {
+        $("#text").append("<p>Ahoj</p>");
+    })
+});
+</script>
+</html>

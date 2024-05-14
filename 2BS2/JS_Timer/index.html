@@ -18,12 +18,18 @@
     let startCount = document.getElementById('startCount');
     let stopky;
     let timeout;
-
+/*
     startCount.addEventListener("click", function() {
         stopky = setInterval(function() {
             par.innerHTML = Date();
         },1000);
     });
+    */
+    window.addEventListener("load",function() {
+        stopky = setInterval(function() {
+            par.innerHTML = Date();
+        },1000);
+    }); 
 
     par.addEventListener("click", function() {
         clearInterval(stopky);
