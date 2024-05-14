@@ -24,6 +24,10 @@ cas.addEventListener("click", () => {
     },1000)
 })
 
+cas.addEventListener("mousedown", () => {
+    clearInterval(stopky);
+})
+
 hell.addEventListener("click", function() {
     timeout = setTimeout(function() {
         alert("Hello World!")
