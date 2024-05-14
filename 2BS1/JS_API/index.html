@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_API</title>
+</head>
+<body> 
+    <div id="photoArea"></div>
+</body>
+<script>
+    let area = document.getElementById('photoArea');
+
+    async function dogPhoto() {
+        let reponse = await fetch('https://dog.ceo/api/breeds/image/random')
+        let dogImg = await reponse.json();
+        let img = document.createElement('img');
+        img.src = dogImg.message;
+        area.append(img);
+    }
+
+    dogPhoto();
+</script>
+</html>
