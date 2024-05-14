@@ -11,6 +11,19 @@
 <script>
     let oblast = document.getElementById("imageArea");
 
+    //Async funkce pro fetch
+    async function dogIMG() {
+        let response = await fetch('https://dog.ceo/api/breeds/image/random')
+        let dog = await response.json();
+        let obrazek = document.createElement('img');
+        obrazek.src = dog.message;
+        oblast.append(obrazek);
+
+    }
+
+    dogIMG();
+
+    //Rovno fetch a then
     fetch("https://dog.ceo/api/breeds/image/random")
     .then(function(response){
         return response.json();})
@@ -20,6 +33,17 @@
             oblast.append(img);
         });
     
+    fetch('https://dog.ceo/api/breed/akita/images/random').then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(dog){
+            let img = document.createElement('img');
+            img.src = dog.message
+            oblast.append(img);   
+        }
+    )
 
 </script>
 </html>
