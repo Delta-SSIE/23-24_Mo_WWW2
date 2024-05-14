@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1 id="nad1">Nadpis 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id maiores velit nam. Ipsam, recusandae temporibus! Blanditiis, placeat laborum et voluptatum pariatur voluptatem nihil saepe esse perspiciatis perferendis deleniti iusto nemo.</p>
+    <button id="textAdd">Click!</button>
+    <div id="TextArea"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#nad1').click(() => {$('p').hide()});
+
+    $('#textAdd').click(() => {$('#TextArea').append('<p class="ahoj">Ahoj!</p>')});
+
+});
+
+</script>
+</html>
