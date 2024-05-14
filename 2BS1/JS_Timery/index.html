@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Timery</title>
+</head>
+<body>
+    <div id="time">
+        <button id="hell">Hello</button>
+        <button id="stop">Stop</button>
+
+        <button id="star">Start</button>
+        <button id="stop2">Stop</button>
+        <p id="cas"></p>
+    </div>
+</body>
+<script>
+let tim = document.getElementById('time');
+let but = document.getElementById('hell');
+let but2 = document.getElementById('stop');
+let startBtn = document.getElementById('star');
+let stopBtn = document.getElementById('stop2');
+let casTxt = document.getElementById('cas');
+
+but.addEventListener("click", function() {
+    let time = setTimeout(hello,3000)
+});
+
+but2.addEventListener("click", function() {
+    clearTimeout(time);
+})
+
+function hello() {
+    alert('Hello');
+}
+
+startBtn.addEventListener("click", function() {
+    let casovac = setInterval(cas,1000);
+})
+
+function cas() {
+    casTxt.innerHTML = Date();
+}
+
+stopBtn.addEventListener("click", function(casovac) {
+    clearInterval(casovac);
+})
+
+</script>
+</html>
