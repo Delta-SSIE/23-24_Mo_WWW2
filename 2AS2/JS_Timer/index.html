@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Timer</title>
+</head>
+<body>
+    <button id="helloBtn">Hello World! 3s!</button>
+    <button id="helloStop">Stop It!</button>
+    <p id="cas">Chceš znát čas?</p>
+</body>
+<script>
+let hell = document.getElementById('helloBtn');
+let hellstop = document.getElementById('helloStop');
+let cas = document.getElementById('cas');
+
+let timeout;
+let stopky;
+
+cas.addEventListener("click", () => {
+    stopky = setInterval(() => {
+        cas.innerHTML = Date();
+    },1000)
+})
+
+hell.addEventListener("click", function() {
+    timeout = setTimeout(function() {
+        alert("Hello World!")
+    },3000)
+})
+
+hellstop.addEventListener("click", function() {
+    clearTimeout(timeout);
+})
+
+</script>
+</html>
